@@ -22,9 +22,14 @@ get_header(); ?>
 <div class="panel-group" id="ervek">
   
   		<?php
-			if($post->post_name == 'ervek'){
+			if($post->post_name == 'ervek' || $post->post_name == 'adatok'){
+				if($post->post_name == 'ervek'){
+					$post_type = 'erv';
+				} else {
+					$post_type = 'adat';
+				}
 				$ervek = get_posts(array(
-					'post_type' => 'erv',
+					'post_type' => $post_type,
 					'numberposts' => -1,
 					'order' => 'ASC'
 				));
@@ -59,7 +64,6 @@ get_header(); ?>
 </div>
 
 
-<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
