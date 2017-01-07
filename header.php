@@ -29,13 +29,13 @@
     </div>
     <ul>
         <li>
-          <a href="/itt-ird-ala/" class="olimpia-voros">itt írd alá</a>
+          <a href="/nepszavazas-a-2024-budapesti-olimpia-ellen-itt-ird-ala/" class="olimpia-voros">itt írd alá</a>
         </li>
         <li>
-          <a href="/tamogass/" class="olimpia-zold">támogass</a>
+          <a href="/nepszavazas-2024-budapesti-olimpia-ellen-tamogass/" class="olimpia-zold">támogass</a>
         </li>
         <li>
-          <a href="/vegyel-reszt/" class="olimpia-sarga">vegyél részt</a>
+          <a href="/nepszavazas-2024-budapest-olimpia-csatlakozz-aktivista/" class="olimpia-sarga">vegyél részt</a>
 
         </li>
         <li>
