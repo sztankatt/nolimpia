@@ -12,7 +12,7 @@ Template Name: Landing page
 <meta property="og:url"                content="https://nolimpia.com" />
 <meta property="og:type"               content="website" />
 <meta property="og:title"              content="NOlimpia" />
-<meta property="og:description"        content="How much does culture influence creative thinking?" />
+<meta property="og:description"        content="Népszavazást kezdeményeztünk a budapesti olimpiáról, mert az erre szánt százmilliárdokat szerintünk másra kellene költeni. Segíts minket egy aláírással! " />
 <meta property="og:image"              content="<?php echo get_theme_file_uri('assets/img/nolimpia-szines-fekete-negyzet.png'); ?>">
 <!-- Facebook meta tags end -->
 
