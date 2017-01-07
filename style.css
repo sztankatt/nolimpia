@@ -16,6 +16,13 @@ h1 {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab"; }
 
+a {
+  color: #8C2360;
+  text-decoration: none; }
+  a:hover {
+    color: #8C2360;
+    text-decoration: none; }
+
 /* TOAST GRID END */
 .top-page {
   height: 100vh;
@@ -193,12 +200,6 @@ h1, h2, h3, h4, h5, h6 {
     .main-section .article p {
       font-family: "Open Sans";
       margin-bottom: 18px; }
-    .main-section .article a {
-      color: #8C2360;
-      text-decoration: none; }
-      .main-section .article a:hover {
-        color: #8C2360;
-        text-decoration: none; }
     .main-section .article .article-img-container {
       border-right: 10px solid #f7a636;
       background-color: #f7a636; }
