@@ -26,7 +26,6 @@ a {
 /* TOAST GRID END */
 .top-page {
   height: 100vh;
-  min-height: 480px;
   overflow: hidden;
   background-position: center center;
   background-size: cover;
@@ -277,6 +276,7 @@ a {
     margin: auto; }
 
 .footer {
+  margin-top: 20px;
   background-color: #282828;
   min-height: 100px;
   color: white;
