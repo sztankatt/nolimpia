@@ -58,7 +58,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1 class="modal-title" id="myModalLabel">
             <?php 
-                $id = 14;
+                $id = 188;
                 $post = get_post($id); 
                 $title = apply_filters('the_title', $post->post_title); 
                 echo $title;  

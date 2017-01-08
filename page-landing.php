@@ -73,20 +73,26 @@ Template Name: Landing page
 
 
 <!-- MODALS -->
- <div class="modal fade" id="momentum-desc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="momentum-desc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <div class="modal-header">
+      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h1 class="modal-title" id="myModalLabel"><?php the_title(); ?></h1>
+        <h1 class="modal-title" id="myModalLabel">
+            <?php 
+                $id = 188;
+                $post = get_post($id); 
+                $title = apply_filters('the_title', $post->post_title); 
+                echo $title;  
+            ?>
+        </h1>
       </div>
       <div class="modal-body">
-        <?php the_content(); ?>
+        <?php 
+            $content = apply_filters('the_content', $post->post_content); 
+            echo $content;    
+        ?>
       </div>
-    <?php
-    if ( ! post_password_required() ) comments_template( '', true ); 
-    endwhile; endif; ?>
     </div>
   </div>
 </div>

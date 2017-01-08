@@ -26,13 +26,13 @@ function get_ervek_or_adatok($type){
 		'numberposts' => -1,
 		'order' => 'ASC'
 	));?>
-	<div class="panel-group" id="ervek">
+	<div class="panel-group" id="postok-<?php $type ?>">
 	<?php	foreach($posts as $post){ ?>
 		
 		<div class="panel panel-default">
 			<div class="panel-heading" role="tab" id="post-heading-<?php echo $post->ID?>">
 				<h4 class="panel-title">
-					<a class="collapsed" role="button" data-parent="#postek" data-toggle="collapse" href="#post-collapse-<?php echo $post->ID?>" aria-controls="post-collapse-<?php echo $post->ID?>">
+					<a class="collapsed" role="button" data-parent="#postok-<?php $type ?>" data-toggle="collapse" href="#post-collapse-<?php echo $post->ID?>" aria-controls="post-collapse-<?php echo $post->ID?>">
 					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.png'); ?>" /><?php echo $post->post_title ?>
 					</a>
 				</h4>
