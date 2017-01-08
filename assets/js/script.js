@@ -13,4 +13,17 @@ $(document).ready(function(){
 
 
 	$('.article-img').parent().children('.col').matchHeight();
+
+	$('#why-not-button').click(function(event){
+		$href = $(this).attr('href');
+
+		event.preventDefault();
+		$('#white-header').css('position', 'relative');
+		$('#landing-page-next').show();
+		$('#landing-page-entry').slideUp(1000, function(){
+			document.location.pathname = $href;
+	
+		});
+
+	});
 });

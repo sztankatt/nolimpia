@@ -33,7 +33,7 @@ a {
   position: relative;
   text-align: center; }
   .top-page .landing-container {
-    margin-top: 200px;
+    margin-top: 250px;
     display: inline-block;
     color: white;
     text-align: center; }
@@ -53,6 +53,8 @@ a {
         text-decoration: none; }
     .top-page .landing-container div {
       margin-bottom: 30px; }
+      .top-page .landing-container div:last-child {
+        margin-bottom: 0px; }
     .top-page .landing-container .why-not {
       font-size: 24pt;
       font-weight: bold;
@@ -175,7 +177,7 @@ a {
   .olimpia-zold-hatter {
     background-color: #068348 !important; }
     .olimpia-zold-hatter:hover {
-      background-color: #2C7F58 !important; }
+      background-color: #266345 !important; }
 
 .momentum-lila-hover:hover {
   color: #8C2360 !important; }
