@@ -22,8 +22,8 @@ get_header(); ?>
 <div class="panel-group" id="ervek">
   
   		<?php
-			if($post->post_name == 'ervek' || $post->post_name == 'adatok'){
-				if($post->post_name == 'ervek'){
+			if($post->ID == 47 || $post->ID == 49){
+				if($post->ID == 47){
 					$post_type = 'erv';
 				} else {
 					$post_type = 'adat';
@@ -40,7 +40,7 @@ get_header(); ?>
 				    <div class="panel-heading" role="tab" id="erv-heading-<?php echo $erv->ID?>">
 				      <h4 class="panel-title">
 				        <a class="collapsed" role="button" data-parent="#ervek" data-toggle="collapse" href="#erv-collapse-<?php echo $erv->ID?>" aria-controls="erv-collapse-<?php echo $erv->ID?>">
-				          <?php echo $erv->post_title ?>
+				          <img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.png'); ?>" /><?php echo $erv->post_title ?>
 				        </a>
 				      </h4>
 				    </div>

@@ -10,6 +10,7 @@
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script> -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
 
 <script src="<?php echo get_theme_file_uri('assets/js/script.js'); ?>"></script>
 <?php wp_footer(); ?>
