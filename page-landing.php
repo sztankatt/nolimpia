@@ -8,21 +8,8 @@ Template Name: Landing page
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
-<!-- Facebook meta tags -->
-<meta property="og:url"                content="https://nolimpia.com" />
-<meta property="og:type"               content="website" />
-<meta property="og:title"              content="NOlimpia" />
-<meta property="og:description"        content="Népszavazást kezdeményeztünk a budapesti olimpiáról, mert az erre szánt százmilliárdokat szerintünk másra kellene költeni. Segíts minket egy aláírással! " />
-<meta property="og:image"              content="<?php echo get_theme_file_uri('assets/img/nolimpia-szines-fekete-negyzet.png'); ?>">
-<!-- Facebook meta tags end -->
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Slab:700|Roboto:400,500,700&amp;subset=latin-ext" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="<?php echo get_theme_file_uri('assets/css/rezso.css'); ?>">
-<link rel="stylesheet" href="<?php echo get_theme_file_uri('assets/css/marco.css'); ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+<?php wp_head(); ?>
 
 </head>
 <body>

@@ -12,7 +12,7 @@ register_nav_menus(
 array( 'main-menu' => __( 'Main Menu', 'blankslate' ) )
 );
 }
-add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
+// add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 function blankslate_load_scripts()
 {
 wp_enqueue_script( 'jquery' );
@@ -81,8 +81,9 @@ function cubiq_setup () {
 
     remove_action( 'wp_head', 'print_emoji_detection_script', 7 );  // #8
     remove_action( 'wp_print_styles', 'print_emoji_styles' );
+    remove_action('wp_head', 'wp_enqueue_script');
 }
-add_action('after_setup_theme', 'cubiq_setup');
+
 
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -93,18 +94,34 @@ remove_action('wp_head', 'feed_links', 2 );
 add_action('wp_head','hook_css');
 
 function hook_css() {
+    $content = '<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Slab:700|Roboto:400,500,700&amp;subset=latin-ext" rel="stylesheet">'
+    . '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css">'
+    . '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">'
+    . '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">'
+    . '<link rel="stylesheet" href="' . get_theme_file_uri('assets/css/rezso.css') . '">'
+    . '<link rel="stylesheet" href="' . get_theme_file_uri('assets/css/marco.css') . '">'
+    . '<link rel="stylesheet" type="text/css" href="' . get_stylesheet_uri() . '" />';
 
-	$output='<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-';
-	echo $output;
+    echo $content;
+}
+
+
+add_action('wp_head','hook_javascript');
+
+function hook_javascript() {
 
 }
 
+add_action('after_setup_theme', 'cubiq_setup');
 add_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
+
+// clean up wp_head(); ----------------------- END
+
+
+/* OTHER STUFF */
 function remove_width_attribute( $html ) {
    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
    return $html;
@@ -141,6 +158,5 @@ function my_img_caption_shortcode( $empty, $attr, $content ){
 
 include('shortcodes.php');
 include('init.php');
-// clean up wp_head(); ----------------------- END
 
 ?>

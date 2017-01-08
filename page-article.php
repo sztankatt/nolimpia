@@ -2,8 +2,8 @@
 /*
 Template Name: Article page
 */
-get_header(); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+get_header(); 
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <div class="section container-fluid main-section">
 	<div class="row article-header" style="background-image: url('<?php if ( has_post_thumbnail() ) { echo get_the_post_thumbnail_url(null, 'full'); } ?>'); ">
