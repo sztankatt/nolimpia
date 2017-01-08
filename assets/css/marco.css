@@ -2,4 +2,65 @@
     .logo {
         margin-left: 9px !important;
     }
+    .header ul{
+    	/*font-size: 12pt;*/
+    }
+
+    .header ul li:nth-child(1){
+    	padding-right: 10px;
+    	padding-top: 50px;
+    }
+
+    .header ul {
+    	position: absolute;
+    	top: 0;
+    }
+
+    .header ul li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5){
+    	margin-right: 100px;
+    	top: 6px;
+    	position: absolute;
+    }
+
+    .header ul li:nth-child(2){
+    	right: -75px;
+    }
+
+    .header ul li:nth-child(3){
+    	right: -105px;
+    }
+
+    .header ul li:nth-child(4){
+    	right: -135px;
+    }
+
+    .header ul li:nth-child(5){
+    	right: -165px;
+    }
+
+    .header ul li a img {
+    	/*height: 35px;*/
+    }
+
+    .top-page .landing-container .slogan{
+    	font-size: 22pt !important;
+    }
+
+    .top-page .landing-container a{
+    	font-size: 18pt !important;
+    }
+    .top-page {
+    	overflow: hidden;
+    }
+
+    .top-page .landing-container .why-not {
+    	margin-top: -50px;
+    }
 }
+
+/*@media only screen and (max-width: 767px){
+    .top-page {
+       padding:0;
+    } 
+ }
+*/
