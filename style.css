@@ -53,6 +53,8 @@ a {
         text-decoration: none; }
     .top-page .landing-container div {
       margin-bottom: 30px; }
+      .top-page .landing-container div:last-child {
+        margin-bottom: 0px; }
     .top-page .landing-container .why-not {
       font-size: 24pt;
       font-weight: bold;

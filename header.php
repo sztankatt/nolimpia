@@ -23,8 +23,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<div id="header" class="header header-white">
+<?php include_once('top-menu.php'); ?>
+<!-- <div id="header" class="header header-white">
     <div id="logo" class="logo">
         <a href="/">&nbsp;
         </a>
@@ -64,7 +64,7 @@
             </a>
         </li>
     </ul>
-</div>
+</div> -->
 <div class="modal fade" id="momentum-desc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

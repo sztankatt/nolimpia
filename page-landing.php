@@ -26,6 +26,7 @@ Template Name: Landing page
 
 </head>
 <body>
+<div id="landing-page-entry">
 	<div id="header" class="header">
         <div id="logo" class="logo">
             <a href="">&nbsp;
@@ -72,10 +73,19 @@ Template Name: Landing page
 			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/nepszavazas-2024-budapest-olimpia-csatlakozz-aktivista/">VEGYÉL RÉSZT</a></div>
             </div>
 			<div class="why-not">
-			 <a href="/nolimpia-budapesti-olimpia-helyett-jovo/">MIÉRT NEM AKARUNK OLIMPIÁT?<!-- <p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p> --></a>
+			 <a id="why-not-button" href="/nolimpia-budapesti-olimpia-helyett-jovo/">MIÉRT NEM AKARUNK OLIMPIÁT?<p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p></a>
 			</div>
         </div>
     </div>
+</div>
+<div id="landing-page-next" style="display: none;">
+
+    <?php include_once('top-menu.php'); ?>
+</div>
+
+
+
+<!-- MODALS -->
  <div class="modal fade" id="momentum-desc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -116,9 +126,12 @@ Template Name: Landing page
     </div>
   </div>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+<script src="<?php echo get_theme_file_uri('assets/js/script.js'); ?>"></script>
 </body>
 
 
