@@ -66,13 +66,13 @@ Template Name: Landing page
         <div class="landing-container">
 			<div class="slogan">NEM AZ OLIMPIÁRA, IGEN A JÖVŐNKRE!</div>
 			<div class="row">
-				<div class="col col--1-of-3"><a class="olimpia-zold-hatter" href="/tamogass/">TÁMOGASS</a></div>
+				<div class="col col--1-of-3"><a class="olimpia-zold-hatter" href="/nepszavazas-2024-budapesti-olimpia-ellen-tamogass/">TÁMOGASS</a></div>
 				
-				<div class="col col--1-of-3"><a class="olimpia-voros-hatter" href="#" data-toggle="modal" data-target="#itt-ird-ala">ITT ÍRD ALÁ</a></div>
-			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/vegyel-reszt/">VEGYÉL RÉSZT</a></div>
+				<div class="col col--1-of-3"><a class="olimpia-voros-hatter" href="/nepszavazas-a-2024-budapesti-olimpia-ellen-itt-ird-ala/">ITT ÍRD ALÁ</a></div>
+			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/nepszavazas-2024-budapest-olimpia-csatlakozz-aktivista/">VEGYÉL RÉSZT</a></div>
             </div>
 			<div class="why-not">
-			 <a href="/a-nolimpia-kampanyrol/">MIÉRT NEM AKARUNK OLIMPIÁT?<!-- <p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p> --></a>
+			 <a href="/nolimpia-budapesti-olimpia-helyett-jovo/">MIÉRT NEM AKARUNK OLIMPIÁT?<!-- <p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p> --></a>
 			</div>
         </div>
     </div>

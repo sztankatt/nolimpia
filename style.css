@@ -16,6 +16,13 @@ h1 {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab"; }
 
+a {
+  color: #8C2360;
+  text-decoration: none; }
+  a:hover {
+    color: #8C2360;
+    text-decoration: none; }
+
 /* TOAST GRID END */
 .top-page {
   height: 100vh;
@@ -56,18 +63,6 @@ h1, h2, h3, h4, h5, h6 {
       right: 0; }
       .top-page .landing-container .why-not p {
         text-align: center; }
-
-.article {
-  padding: 30px; }
-  .article p {
-    font-family: "Open Sans";
-    margin-bottom: 18px; }
-  .article a {
-    color: #8C2360;
-    text-decoration: none; }
-    .article a:hover {
-      color: #8C2360;
-      text-decoration: none; }
 
 .top-text {
   padding: 15px 0px;
@@ -200,6 +195,17 @@ h1, h2, h3, h4, h5, h6 {
       color: white;
       font-size: 24pt;
       padding: 30px 35px; }
+  .main-section .article {
+    padding: 30px; }
+    .main-section .article p {
+      font-family: "Open Sans";
+      margin-bottom: 18px; }
+    .main-section .article .article-img-container {
+      border-right: 10px solid #f7a636;
+      background-color: #f7a636; }
+      .main-section .article .article-img-container img {
+        width: 100%;
+        max-height: 200px; }
   .main-section .left-sidebar {
     background-color: rgba(255, 255, 255, 0.7);
     min-height: 250px;

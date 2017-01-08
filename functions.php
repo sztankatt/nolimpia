@@ -101,6 +101,39 @@ function hook_css() {
 
 }
 
+add_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
+
+function my_img_caption_shortcode( $empty, $attr, $content ){
+    $attr = shortcode_atts( array(
+        'id'      => '',
+        'align'   => 'alignnone',
+        'width'   => '',
+        'caption' => ''
+    ), $attr );
+
+    if ( 1 > (int) $attr['width'] || empty( $attr['caption'] ) ) {
+        return '';
+    }
+
+    if ( $attr['id'] ) {
+        $attr['id'] = 'id="' . esc_attr( $attr['id'] ) . '" ';
+    }
+
+    return '<div ' . $attr['id']
+    . 'class="article-img-container" >'
+    . do_shortcode( $content )
+    // . '<p class="wp-caption-text">' . $attr['caption'] . '</p>'
+    . '</div>';
+
+}
+
 include('shortcodes.php');
 include('init.php');
 // clean up wp_head(); ----------------------- END

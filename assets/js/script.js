@@ -1,11 +1,14 @@
-/* fixing error of the collapsible elements */
+/* removing height and width elements from img */
 
-// $(document).ready(function(){
-// 	$('[data-toggle="collapse"]').click(function(){
-// 		$href = $(this).attr('href');
+$(document).ready(function(){
 
-// 		console.log($href);
+	$('img').each(function(){ 
+		$(this).removeAttr('width')
+		$(this).removeAttr('height');
+	});
 
-// 		$($href).collapse('hide');
-// 	});
-// });
+	$('a').filter(function() {
+	   return this.hostname && this.hostname !== location.hostname;
+	}).attr('target', '_blank');
+
+});
