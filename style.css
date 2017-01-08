@@ -196,16 +196,28 @@ a {
       font-size: 24pt;
       padding: 30px 35px; }
   .main-section .article {
-    padding: 30px; }
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px; }
     .main-section .article p {
       font-family: "Open Sans";
       margin-bottom: 18px; }
-    .main-section .article .article-img-container {
-      border-right: 10px solid #f7a636;
-      background-color: #f7a636; }
-      .main-section .article .article-img-container img {
-        width: 100%;
-        max-height: 200px; }
+      .main-section .article p:last-child {
+        margin-bottom: 0px; }
+  .main-section .article-img {
+    margin-top: 20px;
+    padding-left: 30px;
+    margin-right: 25px;
+    background-color: #f7a636; }
+    .main-section .article-img .article-img-container img {
+      width: 100%;
+      max-height: auto;
+      border-right: 10px solid #f7a636; }
+  .main-section .article-img-caption {
+    margin-top: 20px;
+    padding: 20px 3%;
+    color: white;
+    background-color: #f7a636; }
   .main-section .left-sidebar {
     background-color: rgba(255, 255, 255, 0.7);
     min-height: 250px;
@@ -219,7 +231,8 @@ a {
         text-align: left;
         background-color: transparent;
         border: 0px;
-        color: black; }
+        color: black;
+        font-weight: 700; }
       .main-section .left-sidebar .nav-left li a:focus {
         background-color: transparent;
         color: #282828;
@@ -262,22 +275,43 @@ a {
 
 .footer {
   background-color: #282828;
-  min-height: 100px; }
+  min-height: 100px;
+  color: white;
+  font-size: 15pt;
+  padding: 50px 0px; }
+  .footer .row {
+    margin-right: 0px; }
+    .footer .row .img-container {
+      text-align: right;
+      padding: 30px 30px; }
+      .footer .row .img-container img {
+        width: 180px; }
+    .footer .row .copyright {
+      padding: 20px 30px; }
 
 .panel-group .panel-default {
   border: 0px;
   box-shadow: none; }
   .panel-group .panel-default .panel-body {
-    border-top: 0px !important; }
+    border-top: 0px !important;
+    padding: 15px 0px; }
   .panel-group .panel-default .panel-heading {
     padding: 0px;
     border: 0px;
     background-color: white; }
     .panel-group .panel-default .panel-heading a {
       display: block;
-      padding: 10px 15px;
+      padding: 10px 0px;
       color: #e5263b;
       font-family: "Roboto Slab";
-      font-size: 24px; }
+      font-size: 20pt; }
+      .panel-group .panel-default .panel-heading a:focus {
+        text-decoration: none; }
+      .panel-group .panel-default .panel-heading a .arrow-down {
+        width: 25px;
+        height: 25px;
+        margin-left: -45px;
+        margin-right: 20px;
+        margin-bottom: 5px; }
 
 /*# sourceMappingURL=style.css.map */

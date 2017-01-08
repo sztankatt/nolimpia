@@ -11,4 +11,6 @@ $(document).ready(function(){
 	   return this.hostname && this.hostname !== location.hostname;
 	}).attr('target', '_blank');
 
+
+	$('.article-img').parent().children('.col').matchHeight();
 });

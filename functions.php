@@ -126,11 +126,16 @@ function my_img_caption_shortcode( $empty, $attr, $content ){
         $attr['id'] = 'id="' . esc_attr( $attr['id'] ) . '" ';
     }
 
-    return '<div ' . $attr['id']
+    return '</div></div><div class="row">'
+    . '<div class="col col--1-of-5 article-img-caption">'
+    . $attr['caption']
+    . '</div>'
+    . '<div class="col col--3-of-5 article-img">'
+    . '<div ' . $attr['id']
     . 'class="article-img-container" >'
     . do_shortcode( $content )
     // . '<p class="wp-caption-text">' . $attr['caption'] . '</p>'
-    . '</div>';
+    . '</div></div></div><div class="row"><div class="col col--3-of-5 col--push-1-of-5 article">';
 
 }
 
