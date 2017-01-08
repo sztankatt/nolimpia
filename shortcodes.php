@@ -1,5 +1,7 @@
 <?php 
 add_shortcode('payment_details', 'payment_shortcode_handler');
+add_shortcode('adatok', 'adatok_shortcode_handler');
+add_shortcode('ervek', 'ervek_shortcode_handler');
 
 function payment_shortcode_handler($atts, $content = null){
 	ob_start();
@@ -13,4 +15,53 @@ function payment_shortcode_handler($atts, $content = null){
 	<?php
 	return ob_get_clean();
 }
-?>
+
+function get_ervek_or_adatok($type){
+	if($type != 'erv' && $type != 'adat'){
+		return;
+	}
+	ob_start();
+	$posts = get_posts(array(
+		'post_type' => $type,
+		'numberposts' => -1,
+		'order' => 'ASC'
+	));?>
+	<div class="panel-group" id="ervek">
+	<?php	foreach($posts as $post){ ?>
+		
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="post-heading-<?php echo $post->ID?>">
+				<h4 class="panel-title">
+					<a class="collapsed" role="button" data-parent="#postek" data-toggle="collapse" href="#post-collapse-<?php echo $post->ID?>" aria-controls="post-collapse-<?php echo $post->ID?>">
+					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.png'); ?>" /><?php echo $post->post_title ?>
+					</a>
+				</h4>
+			</div>
+			<div id="post-collapse-<?php echo $post->ID?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="post-heading-<?php echo $post->ID?>">
+				<div class="panel-body">
+				<?php echo $post->post_content ?>
+				</div>
+			</div>
+		</div>
+		<?php
+
+		} ?>
+	</div>
+
+	<?php return ob_get_clean();
+
+
+}
+
+function adatok_shortcode_handler($atts, $content=null){
+	return get_ervek_or_adatok('adat');
+}
+
+function ervek_shortcode_handler($atts, $content=null){
+	return get_ervek_or_adatok('erv');
+	ob_start();?>
+
+	<p>TEST</p>
+	<?php
+	return ob_get_clean();
+}
