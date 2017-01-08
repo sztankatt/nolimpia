@@ -21,7 +21,9 @@ Template Name: Landing page
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo get_theme_file_uri('assets/css/rezso.css'); ?>">
+<link rel="stylesheet" href="<?php echo get_theme_file_uri('assets/css/marco.css'); ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
+
 </head>
 <body>
 	<div id="header" class="header">
