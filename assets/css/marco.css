@@ -1,6 +1,10 @@
 @media only screen and (max-width: 768px) {
-    .logo {
+    #landing-page-entry .logo {
         margin-left: 9px !important;
+    }
+
+    .logo{
+        margin-left: 2px !important;
         width: 150px !important;
     }
 
@@ -72,13 +76,31 @@
 	.top-page .landing-container div {
 		margin-bottom: 15px !important;
 	}
+
+    .container-fluid>.navbar-collapse{
+        background-color: white;
+    }
+
+    .header .nav>li>a{
+        padding: 10px 0px 10px 0px;
+    }
+
+    .navbar-toggle{
+        padding: 17px 18px; 
+    }
+
+     .navbar-toggle .icon-bar {
+      background-color: black; /* Changes regular toggle color */
+    }
+
 }
 
-/*@media only screen and (min-width: 768px){
-    .navbar-nav>li>a{
-        padding-top: 0px;
+@media only screen and (min-width: 768px){
+    .header .navbar-nav>li>a{
+        padding: 0px 5px 0px 0px;
+        line-height: 40px;
     }
-}*/
+}
 /*@media only screen and (max-width: 767px){
     .top-page {
        padding:0;
