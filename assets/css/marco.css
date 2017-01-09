@@ -4,7 +4,7 @@
         width: 150px !important;
     }
 
-    .header ul li:nth-child(1){
+    #landing-page-entry .header ul li:nth-child(1){
     	/*padding-right: 10px;
     	padding-top: 50px; */
     	font-size: 12pt;
@@ -74,6 +74,11 @@
 	}
 }
 
+/*@media only screen and (min-width: 768px){
+    .navbar-nav>li>a{
+        padding-top: 0px;
+    }
+}*/
 /*@media only screen and (max-width: 767px){
     .top-page {
        padding:0;
@@ -81,8 +86,9 @@
  }
 */
 
-@media only screen and (max-width: 1050px) {
+/*@media only screen and (max-width: 1050px) {
 	body{
 		overflow: hidden;
 	}
 }
+*/
