@@ -57,8 +57,8 @@ function get_ervek_or_adatok($type){
 				<div class="panel-body">
 				<?php 
 
-					remove_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
-					echo do_shortcode($post->post_content) ?>
+					// remove_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
+					echo apply_filters('the_content', $post->post_content) ?>
 				</div>
 			</div>
 		</div>

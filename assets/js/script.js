@@ -27,5 +27,5 @@ $(document).ready(function(){
 
 	});
 
-	$('.article a').css('font-weight', '700');
+	$('.article a span').css('font-weight', '700');
 });

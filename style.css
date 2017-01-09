@@ -16,6 +16,9 @@ h1 {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab"; }
 
+hr {
+  border-top-color: #8C2360; }
+
 a {
   color: #8C2360;
   text-decoration: none; }
@@ -208,7 +211,7 @@ strong, b {
     padding-right: 30px; }
     .main-section .article p {
       font-family: "Open Sans";
-      margin-bottom: 18px; }
+      margin-bottom: 20px; }
       .main-section .article p:last-child {
         margin-bottom: 0px; }
     .main-section .article a {
@@ -283,7 +286,7 @@ strong, b {
     margin: auto; }
 
 .footer {
-  margin-top: 20px;
+  margin-top: 25px;
   background-color: #282828;
   min-height: 100px;
   color: white;
@@ -304,7 +307,8 @@ strong, b {
   box-shadow: none; }
   .panel-group .panel-default .panel-body {
     border-top: 0px !important;
-    padding: 15px 0px; }
+    padding: 0px;
+    padding-bottom: 15px; }
   .panel-group .panel-default .panel-heading {
     padding: 0px;
     border: 0px;
