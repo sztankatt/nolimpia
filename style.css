@@ -23,6 +23,9 @@ a {
     color: #8C2360;
     text-decoration: none; }
 
+strong {
+  color: #8C2360; }
+
 /* TOAST GRID END */
 .top-page {
   height: 100vh;
@@ -206,6 +209,8 @@ a {
       margin-bottom: 18px; }
       .main-section .article p:last-child {
         margin-bottom: 0px; }
+    .main-section .article a {
+      font-weight: 700; }
   .main-section .article-img {
     margin-top: 20px;
     padding-left: 30px;

@@ -21,7 +21,7 @@
             <a href="#" class="momentum-lila-hover" data-toggle="modal" data-target="#momentum-desc">momentum</a>
         </li>
         <li>
-          <a href="#">kapcsolat</a>
+          <a href="/nepszavazas-2024-es-budapesti-olimpiarol-irj-nekunk/">kapcsolat</a>
         </li>
 
         <li>

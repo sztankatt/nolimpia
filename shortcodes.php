@@ -2,6 +2,22 @@
 add_shortcode('payment_details', 'payment_shortcode_handler');
 add_shortcode('adatok', 'adatok_shortcode_handler');
 add_shortcode('ervek', 'ervek_shortcode_handler');
+add_shortcode('social_media_share', 'social_media_share_handler');
+
+function social_media_share_handler($atts, $content = null){
+	ob_start(); ?>
+		<a href="http://www.facebook.com/sharer.php?u=https://nolimpia.com" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0');">
+	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>" alt="Facebook" />
+	    </a>
+	    
+	    <a href="https://twitter.com/share?url=https://nolimpia.com&amp;text=NOlimpia&amp;hashtags=nolimpiabp" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0');">
+        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.png'); ?>" alt="Twitter" />
+    </a>
+	<?php
+	return ob_get_clean();
+}
 
 function payment_shortcode_handler($atts, $content = null){
 	ob_start();
