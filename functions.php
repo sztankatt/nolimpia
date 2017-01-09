@@ -84,6 +84,15 @@ function cubiq_setup () {
     remove_action('wp_head', 'wp_enqueue_script');
 }
 
+add_filter('wpseo_opengraph_image', 'opengraph_image');
+
+function opengraph_image(){
+    $meta = '<meta property="og:image" content="'
+            . get_theme_file_uri('assets/img/nolimpia-szines-fekete-negyzet.png')
+            . '" />';
+
+    echo $meta;
+}
 
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -100,6 +109,7 @@ function hook_css() {
     . '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">'
     . '<link rel="stylesheet" href="' . get_theme_file_uri('assets/css/rezso.css') . '">'
     . '<link rel="stylesheet" href="' . get_theme_file_uri('assets/css/marco.css') . '">'
+    . '<link rel="stylesheet" href="' . get_theme_file_uri('sztanka.css') . '">'
     . '<link rel="stylesheet" type="text/css" href="' . get_stylesheet_uri() . '" />';
 
     echo $content;
