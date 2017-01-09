@@ -23,7 +23,7 @@ a {
     color: #8C2360;
     text-decoration: none; }
 
-strong {
+strong, b {
   color: #8C2360; }
 
 /* TOAST GRID END */
@@ -199,7 +199,9 @@ strong {
       bottom: 0px;
       color: white;
       font-size: 24pt;
-      padding: 30px 35px; }
+      padding: 30px 35px;
+      text-shadow: 2px 2px 2px black;
+      text-transform: uppercase; }
   .main-section .article {
     padding-top: 30px;
     padding-left: 30px;
