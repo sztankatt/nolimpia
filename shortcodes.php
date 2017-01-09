@@ -40,7 +40,7 @@ function get_ervek_or_adatok($type){
 	$posts = get_posts(array(
 		'post_type' => $type,
 		'numberposts' => -1,
-		'order' => 'ASC'
+		'order' => 'DESC'
 	));?>
 	<div class="panel-group" id="postok-<?php echo $type ?>">
 	<?php	foreach($posts as $post){ ?>
