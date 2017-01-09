@@ -113,6 +113,7 @@ function hook_javascript() {
 }
 
 add_action('after_setup_theme', 'cubiq_setup');
+/* img shortcode in shortcodes.php */
 add_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
@@ -125,35 +126,6 @@ add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 function remove_width_attribute( $html ) {
    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
    return $html;
-}
-
-function my_img_caption_shortcode( $empty, $attr, $content ){
-    $attr = shortcode_atts( array(
-        'id'      => '',
-        'align'   => 'alignnone',
-        'width'   => '',
-        'caption' => ''
-    ), $attr );
-
-    if ( 1 > (int) $attr['width'] || empty( $attr['caption'] ) ) {
-        return '';
-    }
-
-    if ( $attr['id'] ) {
-        $attr['id'] = 'id="' . esc_attr( $attr['id'] ) . '" ';
-    }
-
-    return '</div></div><div class="row">'
-    . '<div class="col col--1-of-5 article-img-caption">'
-    . $attr['caption']
-    . '</div>'
-    . '<div class="col col--3-of-5 article-img">'
-    . '<div ' . $attr['id']
-    . 'class="article-img-container" >'
-    . do_shortcode( $content )
-    // . '<p class="wp-caption-text">' . $attr['caption'] . '</p>'
-    . '</div></div></div><div class="row"><div class="col col--3-of-5 col--push-1-of-5 article">';
-
 }
 
 include('shortcodes.php');

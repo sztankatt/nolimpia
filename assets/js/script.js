@@ -26,4 +26,6 @@ $(document).ready(function(){
 		});
 
 	});
+
+	$('.article a').css('font-weight', '700');
 });

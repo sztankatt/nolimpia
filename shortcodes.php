@@ -42,20 +42,23 @@ function get_ervek_or_adatok($type){
 		'numberposts' => -1,
 		'order' => 'ASC'
 	));?>
-	<div class="panel-group" id="postok-<?php $type ?>">
+	<div class="panel-group" id="postok-<?php echo $type ?>">
 	<?php	foreach($posts as $post){ ?>
 		
 		<div class="panel panel-default">
 			<div class="panel-heading" role="tab" id="post-heading-<?php echo $post->ID?>">
 				<h4 class="panel-title">
-					<a class="collapsed" role="button" data-parent="#postok-<?php $type ?>" data-toggle="collapse" href="#post-collapse-<?php echo $post->ID?>" aria-controls="post-collapse-<?php echo $post->ID?>">
+					<a class="collapsed" role="button" data-parent="#postok-<?php echo $type ?>" data-toggle="collapse" href="#post-collapse-<?php echo $post->ID?>" aria-controls="post-collapse-<?php echo $post->ID?>">
 					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.png'); ?>" /><?php echo $post->post_title ?>
 					</a>
 				</h4>
 			</div>
 			<div id="post-collapse-<?php echo $post->ID?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="post-heading-<?php echo $post->ID?>">
 				<div class="panel-body">
-				<?php echo $post->post_content ?>
+				<?php 
+
+					remove_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
+					echo do_shortcode($post->post_content) ?>
 				</div>
 			</div>
 		</div>
@@ -75,9 +78,33 @@ function adatok_shortcode_handler($atts, $content=null){
 
 function ervek_shortcode_handler($atts, $content=null){
 	return get_ervek_or_adatok('erv');
-	ob_start();?>
+}
 
-	<p>TEST</p>
-	<?php
-	return ob_get_clean();
+function my_img_caption_shortcode( $empty, $attr, $content ){
+    $attr = shortcode_atts( array(
+        'id'      => '',
+        'align'   => 'alignnone',
+        'width'   => '',
+        'caption' => ''
+    ), $attr );
+
+    if ( 1 > (int) $attr['width'] || empty( $attr['caption'] ) ) {
+        return '';
+    }
+
+    if ( $attr['id'] ) {
+        $attr['id'] = 'id="' . esc_attr( $attr['id'] ) . '" ';
+    }
+
+    return '</div></div><div class="row">'
+    . '<div class="col col--1-of-5 article-img-caption">'
+    . $attr['caption']
+    . '</div>'
+    . '<div class="col col--3-of-5 article-img">'
+    . '<div ' . $attr['id']
+    . 'class="article-img-container" >'
+    . do_shortcode( $content )
+    // . '<p class="wp-caption-text">' . $attr['caption'] . '</p>'
+    . '</div></div></div><div class="row"><div class="col col--3-of-5 col--push-1-of-5 article">';
+
 }
