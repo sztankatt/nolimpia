@@ -54,7 +54,24 @@
 
     .top-page {
     	overflow: hidden;
+    	height: 90vh !important;
     }
+
+    .row div.col.col--1-of-3{
+    	display: inline-block;
+    }
+
+	.row div.col.col--1-of-3:first-child{
+		margin-left: -15px !important;
+	}   
+	 
+    .row div.col.col--1-of-3 a{
+    font-size: 10pt !important;
+	}
+
+	.top-page .landing-container div {
+		margin-bottom: 15px !important;
+	}
 }
 
 /*@media only screen and (max-width: 767px){
