@@ -21,7 +21,7 @@ Template Name: Landing page
         </div>
         <ul>
             <li>
-                <a href="#" data-toggle="modal" data-target="#momentum-desc">A <strong class="momentum-lila-hover">momentum</strong> szervezésében</a>
+                <a href="#" data-toggle="modal" data-target="#momentum-desc">a <strong class="momentum-lila-hover">momentum</strong> szervezésében</a>
             </li>
             <li>
                 <a target="_blank" href="https://www.facebook.com/nolimpiabp"><img style="margin-left:0px;" src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>"></img>

@@ -47,6 +47,27 @@ function create_ervek() {
   );
 }
 
+/* New post type adding functions */
+function create_gyik() {
+  register_post_type( 'gyik',
+    array(
+      'labels' => array(
+        'name' => __( 'GYIK' ),
+        'singular_name' => __( 'Gyakori kerdes' ),
+        'add_new' => _('Új Gyakori kerdes'),
+        'add_new_item' => _('Új Gyakori kerdes'),
+        'edit_item' => _('Gyakorik kerdes szerkesztése'),
+        'new_item' => _('Új Gyakori kerdes'),
+        'view_item' => _('Gyakori kerdes megtekintése'),
+        'view_items' => _('GYIK megtekintése')
+
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+
 function create_adatok() {
   register_post_type( 'adat',
     array(
@@ -75,3 +96,4 @@ add_action( 'init', 'change_default_posts_object' );
 //NEW POSTS
 add_action( 'init', 'create_ervek' );
 add_action( 'init', 'create_adatok');
+add_action( 'init', 'create_gyik');

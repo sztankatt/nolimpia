@@ -402,6 +402,12 @@
     .col.col--m-3-of-4 {
         width: 75%;
     }
+    .col.col--m-2-of-5{
+        width: 40%;
+    }
+    .col.col--m-3-of-5{
+        width: 60%;
+    }
     .col.col--m-4-of-5{
         width: 80%;
     }

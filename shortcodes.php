@@ -2,6 +2,7 @@
 add_shortcode('payment_details', 'payment_shortcode_handler');
 add_shortcode('adatok', 'adatok_shortcode_handler');
 add_shortcode('ervek', 'ervek_shortcode_handler');
+add_shortcode('gyik', 'gyik_shortcode_handler');
 add_shortcode('social_media_share', 'social_media_share_handler');
 add_shortcode('iframe', 'iframe_handler');
 
@@ -32,7 +33,7 @@ function payment_shortcode_handler($atts, $content = null){
 }
 
 function get_ervek_or_adatok($type){
-	if($type != 'erv' && $type != 'adat'){
+	if($type != 'erv' && $type != 'adat' && $type != 'gyik'){
 		return;
 	}
 	ob_start();
@@ -77,6 +78,10 @@ function adatok_shortcode_handler($atts, $content=null){
 
 function ervek_shortcode_handler($atts, $content=null){
 	return get_ervek_or_adatok('erv');
+}
+
+function gyik_shortcode_handler($atts, $content=null){
+	return get_ervek_or_adatok('gyik');
 }
 
 function my_img_caption_shortcode( $empty, $attr, $content ){

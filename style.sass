@@ -19,23 +19,6 @@ $vilagos-szurke: #a5a5a5
 $momentum-lila: #8C2360
 $szurke: #ececec
 
-
-@media (min-width: 480px)
-	html,body
-		font-size: 15pt
-		font-family: "Open Sans"
-
-@media (max-width: 479px)
-	font-size: 12pt
-
-@media(max-width: 767px)
-	.article-title
-		position: relative!important
-	.arrow-down
-		margin-left: 0px!important
-	.left-sidebar
-		min-height: 0px!important
-
 @charset "UTF-8"
 
 h1
@@ -59,10 +42,51 @@ strong, b
 	color: $momentum-lila
 
 /* media */
-@media(max-width: 480px)
+@media (max-width: 479px)
+	font-size: 12pt
+
 	#header ul li a img
 		margin-left: -15px!important
 		margin-right: -15px!important
+
+	.article-title
+		font-size: 15pt!important
+		position: relative!important
+
+@media (min-width: 480px)
+	html,body
+		font-size: 15pt
+		font-family: "Open Sans"
+
+@media (min-width: 480px) and (max-width: 767px)
+	.article-title
+		font-size: 20pt!important
+		position: relative!important
+
+@media (min-width: 768px)
+	.article-title
+		font-size: 24pt
+
+@media (max-width: 767px)
+	.arrow-down
+		margin-left: 0px!important
+	.left-sidebar
+		min-height: 0px!important
+
+	.feed-container .feed-first-row .main-article
+		padding: 30px 35px
+		a
+			padding: 0px
+
+@media (max-width: 991px)
+	.top-page .landing-container
+		margin-top: 180px
+
+@media (min-width: 992px)
+	.landing-container
+		margin-top: 250px
+
+/* NAVBAR SPECIFIC MEDIA */
 @media (min-width: 768px) and (max-width: 1080px)
 	.navbar-collapse.collapse
 		display: none !important
@@ -118,7 +142,6 @@ strong, b
 	position: relative
 	text-align: center
 	.landing-container
-		margin-top: 250px
 		display: inline-block
 		color: white
 		text-align: center
@@ -315,6 +338,17 @@ strong, b
 	&:hover
 		color: $momentum-lila!important
 
+
+.article-title
+	position: absolute
+	bottom: 0px
+	color: white
+	padding: 30px 35px
+	text-shadow: 2px 2px 2px black
+	text-transform: uppercase
+	&:hover
+		color: white
+
 /* article main section */
 .main-section
 	margin-top: 70px
@@ -325,14 +359,6 @@ strong, b
 		background-repeat: no-repeat
 		background-size: cover
 		position: relative
-		.article-title
-			position: absolute
-			bottom: 0px
-			color: white
-			font-size: 24pt
-			padding: 30px 35px
-			text-shadow: 2px 2px 2px black
-			text-transform: uppercase
 
 	.article
 		padding-top: 30px
@@ -432,20 +458,11 @@ strong, b
 			margin-right: 17px
 
 .feed-container
-	margin-top: 148px
+	margin-top: 70px
 	padding: 30px 50px
 	background-color: $szurke
 
 	.feed-first-row
-		.article-title
-			position: absolute
-			bottom: 0px
-			font-size: 24pt
-			text-transform: uppercase
-			color: white
-			text-shadow: 2px 2px 2px black
-			padding: 30px 35px
-
 		.main-article
 			background-position: center center
 			background-repeat: no-repeat
@@ -462,6 +479,7 @@ strong, b
 .paypal-form
 	height: 50px
 	margin-bottom: 18px
+	position: relative
 	.paypal-button-img
 		position: absolute
 		left: 0
