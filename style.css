@@ -64,8 +64,8 @@ strong, b {
     .footer .img-container {
       text-align: right; } }
 @media (max-width: 767px) {
-  .header:not(.header-white) {
-    padding-left: 0px !important; }
+  .header-white {
+    margin-left: 0px !important; }
 
   .arrow-down {
     margin-left: 0px !important; }
