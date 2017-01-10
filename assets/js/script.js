@@ -36,7 +36,7 @@ $(document).ready(function(){
 	        var offset = $('.panel.panel-default > .panel-collapse.in').offset();
 	        if(offset) {
 	            $('html,body').animate({
-	                scrollTop: $('.panel-title a').offset().top -50
+	                scrollTop: $('.panel-title a').offset().top -20
 	            }, 500); 
 	        }
 	    }); 
