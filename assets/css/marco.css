@@ -1,6 +1,6 @@
 @media only screen and (max-width: 768px) {
     #landing-page-entry .logo {
-        margin-left: 9px !important;
+        /*margin-left: 9px !important;*/
     }
 
     .logo{
@@ -48,9 +48,6 @@
     	font-size: 22pt !important;
     }
 
-    .top-page .landing-container {
-    	margin-top: 135px !important;
-    }
 
     .top-page .landing-container a{
     	font-size: 18pt !important;
@@ -58,7 +55,6 @@
 
     .top-page {
     	overflow: hidden;
-    	height: 90vh !important;
     }
 
     .row div.col.col--1-of-3{

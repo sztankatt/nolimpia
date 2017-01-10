@@ -54,6 +54,9 @@ strong, b
 		font-size: 15pt!important
 		position: relative!important
 
+	.top-page .landing-container
+		margin-top: 60px
+
 @media (min-width: 480px)
 	html,body
 		font-size: 15pt
@@ -63,6 +66,9 @@ strong, b
 	.article-title
 		font-size: 20pt!important
 		position: relative!important
+
+	.top-page .landing-container
+		margin-top: 120px
 
 @media (min-width: 768px)
 	.article-title
@@ -79,6 +85,8 @@ strong, b
 			text-align: right
 
 @media (max-width: 767px)
+	.header:not(.header-white)
+		padding-left: 0px!important
 	.arrow-down
 		margin-left: 0px!important
 	.left-sidebar
@@ -101,7 +109,7 @@ strong, b
 		.img-container
 			text-align: center
 
-@media (max-width: 991px)
+@media (max-width: 991px) and (min-width: 768px)
 	.top-page .landing-container
 		margin-top: 180px
 
@@ -155,6 +163,10 @@ strong, b
 
 .navbar li a
 	float: left
+
+.navbar-brand
+	padding: 0px 0px !important
+
 
 .top-page
 	height: 100vh
@@ -218,13 +230,11 @@ strong, b
 	height: 1px
 
 .header
-	background-color: transparent
-	position: fixed
-	top: 0
+	padding-left: 15px
 	width: 100%
-	z-index: 100
 	height: 70px
-
+	z-index: 100
+	background-color: transparent
 	.logo
 		background-image: url("assets/img/nolimpia-szines-feher.png")
 		width: 160px
@@ -233,7 +243,7 @@ strong, b
 		background-position: center center
 		background-size: contain
 		float: left
-		margin-left: 20px
+		// margin-left: 20px
 	a
 		display: block
 		height: 100%
@@ -283,6 +293,9 @@ strong, b
 
 
 .header-white
+	margin-left: -15px
+	position: fixed
+	top: 0
 	background-color: white
 	.logo
 		background-image: url("assets/img/nolimpia-szines-fekete.png")

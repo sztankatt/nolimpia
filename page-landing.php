@@ -14,7 +14,17 @@ Template Name: Landing page
 </head>
 <body>
 <div id="landing-page-entry">
-	<div id="header" class="header">
+    <?php 
+        if (has_post_thumbnail()){
+            $background = get_the_post_thumbnail_url(null, 'full');
+            //echo $background;
+        }
+        else{
+            $background = get_theme_file_uri('assets/img/olimpia-athen-sotet.png');
+        }
+    ?>
+    <div class="top-page" style="background-image: url('<?php echo $background ?>');">
+    <div id="header" class="header">
         <div id="logo" class="logo">
             <a href="">&nbsp;
             </a>
@@ -41,16 +51,6 @@ Template Name: Landing page
             </li>
         </ul>
     </div>
-    <?php 
-        if (has_post_thumbnail()){
-            $background = get_the_post_thumbnail_url(null, 'full');
-            //echo $background;
-        }
-        else{
-            $background = get_theme_file_uri('assets/img/olimpia-athen-sotet.png');
-        }
-    ?>
-    <div class="top-page" style="background-image: url('<?php echo $background ?>');">
         <div class="landing-container">
 			<div class="slogan">NEM AZ OLIMPIÁRA, IGEN A JÖVŐNKRE!</div>
 			<div class="row">

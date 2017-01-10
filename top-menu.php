@@ -10,12 +10,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span> 
           </button>
-          <a class="navbar-brand" href="#">
             <div id="logo" class="logo">
                  <a href="/">&nbsp;
                  </a>
             </div>
-            </a>
           <ul class="nav navbar-nav nav-cat">
                 <li><a href="/adomany-olimpia-nepszavazas-budapest-2024/" class="olimpia-zold">támogass</a></li> 
                 <li><a href="/nepszavazas-a-2024-budapesti-olimpia-ellen-itt-ird-ala/" class="olimpia-voros">írd alá</a></li>
