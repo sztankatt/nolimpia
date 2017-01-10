@@ -9,8 +9,6 @@
     }
 
     #landing-page-entry .header ul li:nth-child(1){
-    	/*padding-right: 10px;
-    	padding-top: 50px; */
     	font-size: 12pt;
     	position: absolute;
     	top: 80px;
@@ -22,27 +20,9 @@
     	margin-top:15px !important;
     }
 
-    .header ul li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5){
-    	/*margin-right: 100px;
-    	top: 6px;
-    	position: absolute;*/
+    .col {
+        padding-left: 0px;
     }
-
- /*   .header ul li:nth-child(2){
-    	right: -75px;
-    }
-
-    .header ul li:nth-child(3){
-    	right: -105px;
-    }
-
-    .header ul li:nth-child(4){
-    	right: -135px;
-    }
-
-    .header ul li:nth-child(5){
-    	right: -165px;
-    }*/
 
     .top-page .landing-container .slogan{
     	font-size: 22pt !important;
@@ -62,11 +42,11 @@
     }
 
 	.row div.col.col--1-of-3:first-child{
-		margin-left: -15px !important;
+		margin-left: 5px !important;
 	}   
 	 
     .row div.col.col--1-of-3 a{
-    font-size: 10pt !important;
+    font-size: 12pt !important;
 	}
 
 	.top-page .landing-container div {
@@ -97,16 +77,18 @@
         line-height: 40px;
     }
 }
-/*@media only screen and (max-width: 767px){
-    .top-page {
-       padding:0;
-    } 
+@media only screen and (min-width: 481px)
+and (max-width: 767px){
+    
+    .row div.col.col--1-of-3 a{
+    font-size: 16pt !important;
+    }
+    .top-page .landing-container .slogan{
+        font-size: 28pt !important;
+    }
+    #landing-page-entry .header ul li:nth-child(1){
+        font-size: 14pt !important;
+    }
  }
-*/
 
-/*@media only screen and (max-width: 1050px) {
-	body{
-		overflow: hidden;
-	}
-}
-*/
+
