@@ -21,7 +21,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col--3-of-5 col--push-1-of-5 article col--m-4-of-5">
+		<div class="col col--3-of-5 col--push-1-of-5 article col--m-8-of-10 col--m-push-1-of-10">
 			<?php edit_post_link(); ?>
 			<?php the_content(); ?>	
 	

@@ -43,7 +43,8 @@ strong, b
 
 /* media */
 @media (max-width: 479px)
-	font-size: 12pt
+	html, body
+		font-size: 12pt
 
 	#header ul li a img
 		margin-left: -15px!important
@@ -67,6 +68,16 @@ strong, b
 	.article-title
 		font-size: 24pt
 
+	.footer
+		font-size: 15pt
+		min-height: 100px
+		padding: 50px 0px
+		.copyright
+			text-align: left
+
+		.img-container
+			text-align: right
+
 @media (max-width: 767px)
 	.arrow-down
 		margin-left: 0px!important
@@ -77,6 +88,18 @@ strong, b
 		padding: 30px 35px
 		a
 			padding: 0px
+
+	.footer
+		padding: 20px 0px
+		font-size: 12pt
+		.copyright
+			text-align: center
+
+		.col
+			display: block!important
+
+		.img-container
+			text-align: center
 
 @media (max-width: 991px)
 	.top-page .landing-container
@@ -128,7 +151,7 @@ strong, b
 
 @media (max-width: 1080px)
 	.navbar li a img
-		margin-bottom: -3px!important
+		margin-bottom: 0px!important
 
 .navbar li a
 	float: left
@@ -474,8 +497,6 @@ strong, b
 .main-section
 	padding-bottom: 20px
 
-.footer
-	margin: 0px!important
 .paypal-form
 	height: 50px
 	margin-bottom: 18px
@@ -488,17 +509,11 @@ strong, b
 
 
 .footer
-	margin-top: 25px
 	background-color: $sotet-szurke
-	min-height: 100px
-	// background-color: $sotet-szurke
 	color: white
-	font-size: 15pt
-	padding: 50px 0px
 	.row
 		margin-right: 0px
 		.img-container
-			text-align: right
 			padding: 30px 30px
 			img
 				width: 180px

@@ -381,6 +381,12 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+    .col--m-no-push {
+        margin-left: 0px;
+    }
+}
+
 @media (max-width: 991px) and (min-width: 768px) {
     .col[class*="col--m-"] {
         display: inline-block;
@@ -410,6 +416,14 @@
     }
     .col.col--m-4-of-5{
         width: 80%;
+    }
+    .col.col--m-8-of-10{
+        width: 80%;
+    }
+    
+    /*PUSH*/
+    .col.col--m-push-1-of-10{
+        margin-left: 10%;
     }
 }
 

@@ -1,8 +1,8 @@
 <div class="container-fluid footer">
   <div class="row">
-  	<div class="col col--1-of-3"><div class="copyright">Copyright &copy; Momentum Egyesület, 2017. Minden jog fenntartva.</div></div>
-  	<div class="col col--1-of-3  col--push-1-of-3">
-  		<div class="img-container"><img src="<?php echo get_theme_file_uri('assets/img/momentum-feher-transparent.png'); ?>" /></div>
+  	<div class="col col--1-of-3 col--m-1-of-2"><div class="copyright">Copyright &copy; Momentum Egyesület, 2017. Minden jog fenntartva.</div></div>
+  	<div class="col col--1-of-3 col--push-1-of-3 col--m-1-of-2 col--m-no-push img-container">
+  		<img src="<?php echo get_theme_file_uri('assets/img/momentum-feher-transparent.png'); ?>" />
   	</div>
   </div>
 </div>

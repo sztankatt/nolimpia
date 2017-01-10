@@ -15,6 +15,7 @@ $(document).ready(function(){
 	$('.article-img').parent().children('.col').matchHeight();
 
 	$('.feed-first-row .col').matchHeight();
+	$('.footer .row .col').matchHeight();
 
 	$('#why-not-button').click(function(event){
 		$href = $(this).attr('href');
