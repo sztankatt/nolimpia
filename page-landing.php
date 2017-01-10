@@ -31,10 +31,10 @@ Template Name: Landing page
                 <a target="_blank" href="https://www.twitter.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.png'); ?>"></img>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a target="_blank" href="https://www.youtube.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-03.png'); ?>"></img>
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a target="_blank" href="https://www.instagram.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-04.png'); ?>"></img>
                 </a>
@@ -56,7 +56,7 @@ Template Name: Landing page
 			<div class="row">
 				<div class="col col--1-of-3"><a class="olimpia-zold-hatter" href="/adomany-olimpia-nepszavazas-budapest-2024/">TÁMOGASS</a></div>
 				
-				<div class="col col--1-of-3"><a class="olimpia-voros-hatter" href="/nepszavazas-a-2024-budapesti-olimpia-ellen-itt-ird-ala/">ITT ÍRD ALÁ</a></div>
+				<div class="col col--1-of-3"><a class="olimpia-voros-hatter" href="/nepszavazas-a-2024-budapesti-olimpia-ellen-itt-ird-ala/">ÍRD ALÁ</a></div>
 			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/nepszavazas-2024-budapest-olimpia-csatlakozz-aktivista/">VEGYÉL RÉSZT</a></div>
             </div>
 			<div class="why-not">

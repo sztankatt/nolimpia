@@ -5,10 +5,21 @@
  * Author URI: none
  * Description: nolimpia honlap
  * Version: 0.0.1 */
-html, body {
-  font-size: 15pt;
-  font-family: "Open Sans"; }
+@media (min-width: 480px) {
+  html, body {
+    font-size: 15pt;
+    font-family: "Open Sans"; } }
+@media (max-width: 479px) {
+  font-size: 12pt; }
+@media(max-width: 767px) {
+  .article-title {
+    position: relative !important; }
 
+  .arrow-down {
+    margin-left: 0px !important; }
+
+  .left-sidebar {
+    min-height: 0px !important; } }
 h1 {
   font-family: "Roboto Slab";
   font-size: 24pt; }
@@ -29,7 +40,11 @@ a {
 strong, b {
   color: #8C2360; }
 
-/* navbar */
+/* media */
+@media(max-width: 480px) {
+  #header ul li a img {
+    margin-left: -15px !important;
+    margin-right: -15px !important; } }
 @media (min-width: 768px) and (max-width: 1080px) {
   .navbar-collapse.collapse {
     display: none !important; }
@@ -162,7 +177,9 @@ strong, b {
       padding-left: 10px;
       padding-right: 10px; }
       .header ul li a img {
-        margin-bottom: 5px; }
+        margin-bottom: 5px;
+        margin-left: -10px;
+        margin-right: -10px; }
         .header ul li a img:not(:first-child) {
           padding-left: 10px;
           padding-right: 10px; }
@@ -179,6 +196,9 @@ strong, b {
     font-weight: 700; }
     .header-white ul li a:hover {
       background-color: transparent !important; }
+    .header-white ul li a img {
+      margin-left: 0px;
+      margin-right: 0px; }
 
 .landing-button {
   position: absolute;
@@ -233,12 +253,6 @@ strong, b {
   color: #8C2360 !important; }
 
 /* article main section */
-@media(max-width: 767px) {
-  .article-title {
-    position: relative !important; }
-
-  .arrow-down {
-    margin-left: 0px !important; } }
 .main-section {
   margin-top: 70px;
   min-height: 100vh; }
@@ -403,5 +417,18 @@ strong, b {
         margin-left: -45px;
         margin-right: 20px;
         margin-bottom: 5px; }
+
+.iframe-container {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.iframe-container iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }
 
 /*# sourceMappingURL=style.css.map */

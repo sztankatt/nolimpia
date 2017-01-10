@@ -3,6 +3,7 @@ add_shortcode('payment_details', 'payment_shortcode_handler');
 add_shortcode('adatok', 'adatok_shortcode_handler');
 add_shortcode('ervek', 'ervek_shortcode_handler');
 add_shortcode('social_media_share', 'social_media_share_handler');
+add_shortcode('iframe', 'iframe_handler');
 
 function social_media_share_handler($atts, $content = null){
 	ob_start(); ?>
@@ -105,4 +106,16 @@ function my_img_caption_shortcode( $empty, $attr, $content ){
     // . '<p class="wp-caption-text">' . $attr['caption'] . '</p>'
     . '</div></div></div><div class="row"><div class="col col--3-of-5 col--push-1-of-5 article">';
 
+}
+
+function iframe_handler($atts, $content){
+	$a = shortcode_atts(array(
+		'src' => ''), $atts);
+
+	if ($a['src'] == '') return;
+	ob_start(); ?>
+		<div class="iframe-container">
+		<iframe style="border: 0;" src="<?php echo $a['src'] ?>" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+	<?php
+	return ob_get_clean();
 }

@@ -109,7 +109,7 @@ function hook_css() {
     . '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">'
     . '<link rel="stylesheet" href="' . get_theme_file_uri('assets/css/rezso.css') . '">'
     . '<link rel="stylesheet" href="' . get_theme_file_uri('assets/css/marco.css') . '">'
-    . '<link rel="stylesheet" href="' . get_theme_file_uri('sztanka.css') . '">'
+    // . '<link rel="stylesheet" href="' . get_theme_file_uri('sztanka.css') . '">'
     . '<link rel="stylesheet" type="text/css" href="' . get_stylesheet_uri() . '" />';
 
     echo $content;
