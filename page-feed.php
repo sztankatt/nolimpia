@@ -9,7 +9,6 @@ $image_url = get_the_post_thumbnail_url(196, 'full');
 $header_post_id = 202;
 $header_post = get_post($header_post_id);
 
-
 ?>
 
 <div class="feed-container container-fluid">
@@ -18,7 +17,7 @@ $header_post = get_post($header_post_id);
 			<?php get_sidebar(); ?>
 		</div>
 		<div class="col-md-8 main-article" style="background-image: url('<?php echo get_the_post_thumbnail_url($header_post, 'full') ?>');">
-			<a href="<?php echo get_permalink($header_post); ?>" class="feed-article-title">Vajon egy budapesti olimpia mindenki szamara kifizetodo? Talalgatasok, elmelkedesek, adatok.</a>
+			<a href="<?php echo get_permalink($header_post); ?>" class="feed-article-title"><?php echo $header_post->post_title ?></a>
 		</div>
 	</div>
 	<?php
