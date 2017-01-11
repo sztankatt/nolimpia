@@ -15,7 +15,7 @@ $(document).ready(function(){
 	$('.article-img').parent().children('.col').matchHeight();
 
 	$('.feed-first-row div').matchHeight();
-	$('.feed-second-row div').matchHeight();
+	// $('.feed-second-row div').matchHeight();
 	$('.feed-third-row div').matchHeight();
 	$('.footer .row .col').matchHeight();
 

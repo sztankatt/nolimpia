@@ -177,9 +177,6 @@ strong, b {
 @media (max-width: 650px) {
   .nav-cat {
     display: none !important; } }
-@media (min-width: 651px) and (max-width: 1080px) {
-  .cat-container {
-    display: none !important; } }
 @media (min-width: 1080px) {
   .nav-cat {
     display: none !important; } }
@@ -291,12 +288,12 @@ strong, b {
           padding-right: 10px; }
 
 .header-white {
-  margin-left: -15px;
   position: fixed;
   top: 0;
   background-color: white; }
   .header-white .logo {
-    background-image: url("assets/img/nolimpia-szines-fekete.png"); }
+    background-image: url("assets/img/nolimpia-szines-fekete.png");
+    margin-left: -15px; }
   .header-white ul li a {
     color: #282828;
     text-decoration: none;
@@ -456,25 +453,30 @@ strong, b {
   padding: 30px 50px;
   background-color: #ececec; }
   .feed-container .feed-first-row .feed-article-title, .feed-container .feed-second-row .feed-article-title {
-    color: white;
-    text-shadow: 2px 2px 2px grey;
+    color: black;
     text-transform: uppercase;
     position: absolute;
-    bottom: 0px; }
+    bottom: 0px;
+    background-color: white;
+    opacity: 0.8;
+    font-weight: 700; }
     .feed-container .feed-first-row .feed-article-title:hover, .feed-container .feed-second-row .feed-article-title:hover {
-      color: white; }
+      color: #282828; }
   .feed-container .feed-first-row .main-article {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     min-height: 350px; }
+    .feed-container .feed-first-row .main-article .feed-article-title {
+      margin-left: -15px;
+      width: 100%; }
   .feed-container .feed-second-row .feed-article-container {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    min-height: 250px;
+    min-height: 280px;
     margin-top: 10px; }
   .feed-container .feed-third-row {
     margin-top: 20px;

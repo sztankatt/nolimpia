@@ -17,7 +17,7 @@
           <ul class="nav navbar-nav nav-cat">
                 <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 53)?>/" class="olimpia-zold">támogass</a></li> 
                 <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 63)?>/" class="olimpia-voros">írd alá</a></li>
-                <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 55)?>/" class="olimpia-sarga">vegyél részt</a></li>
+              <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 55)?>/" class="olimpia-sarga">vegyél részt</a></li>
         </ul>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">

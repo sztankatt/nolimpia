@@ -211,8 +211,8 @@ strong, b
 		display: none!important
 
 @media (min-width: 651px) and (max-width: 1080px)
-	.cat-container
-		display: none!important
+	// .cat-container
+	// 	display: none!important
 
 @media (min-width: 1080px)
 	.nav-cat
@@ -354,12 +354,12 @@ strong, b
 
 
 .header-white
-	margin-left: -15px
 	position: fixed
 	top: 0
 	background-color: white
 	.logo
 		background-image: url("assets/img/nolimpia-szines-fekete.png")
+		margin-left: -15px
 
 	ul li a
 		color: $sotet-szurke
@@ -561,14 +561,16 @@ strong, b
 
 	.feed-first-row, .feed-second-row
 		.feed-article-title
-			color: white
-			text-shadow: 2px 2px 2px grey
+			color: black
 			text-transform: uppercase
 			position: absolute
 			bottom: 0px
+			background-color: white
+			opacity: 0.8
+			font-weight: 700
 
 			&:hover
-				color: white
+				color: $sotet-szurke
 
 	.feed-first-row
 		.main-article
@@ -577,6 +579,9 @@ strong, b
 			background-size: cover
 			position: relative
 			min-height: 350px
+			.feed-article-title
+				margin-left: -15px
+				width: 100%
 
 	.feed-second-row
 		.feed-article-container
@@ -584,7 +589,7 @@ strong, b
 			background-repeat: no-repeat
 			background-size: cover
 			position: relative
-			min-height: 250px
+			min-height: 280px
 			margin-top: 10px
 			// margin-bottom: 10px
 	.feed-third-row
