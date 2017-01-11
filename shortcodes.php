@@ -36,6 +36,7 @@ function get_ervek_or_adatok($type){
 	if($type != 'erv' && $type != 'adat' && $type != 'gyik'){
 		return;
 	}
+	$i = 1;
 	ob_start();
 	$posts = get_posts(array(
 		'post_type' => $type,
@@ -49,7 +50,7 @@ function get_ervek_or_adatok($type){
 			<div class="panel-heading" role="tab" id="post-heading-<?php echo $post->ID?>">
 				<h4 class="panel-title">
 					<a class="collapsed" role="button" data-parent="#postok-<?php echo $type ?>" data-toggle="collapse" href="#post-collapse-<?php echo $post->ID?>" aria-controls="post-collapse-<?php echo $post->ID?>">
-					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.png'); ?>" /><?php echo $post->post_title ?>
+					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.png'); ?>" /><?php echo $i . ". " . $post->post_title ?>
 					</a>
 				</h4>
 			</div>
@@ -63,7 +64,7 @@ function get_ervek_or_adatok($type){
 			</div>
 		</div>
 		<?php
-
+		$i = $i + 1;
 		} ?>
 	</div>
 
