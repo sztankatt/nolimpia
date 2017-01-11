@@ -43,7 +43,7 @@ function create_ervek() {
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array('thumbnail')
+      'supports' => array('thumbnail', 'title', 'editor', 'author')
     )
   );
 }
@@ -65,7 +65,8 @@ function create_gyik() {
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array('thumbnail')
+      'supports' => array('thumbnail', 'title', 'editor', 'author')
+
     )
   );
 }
