@@ -98,6 +98,7 @@ strong, b
 @media (min-width: 768px)
 	.article-title
 		font-size: 24pt
+		margin-left: 5px
 
 	.footer
 		font-size: 15pt
@@ -108,6 +109,9 @@ strong, b
 
 		.img-container
 			text-align: right
+	.left-sidebar
+
+		border-right: 5px solid $olimpia-kek
 
 @media (max-width: 767px)
 	.header-white
@@ -116,6 +120,8 @@ strong, b
 		margin-left: 0px!important
 	.left-sidebar
 		min-height: 0px!important
+
+		border-bottom: 5px solid $olimpia-kek
 
 	.footer
 		padding: 20px 0px
@@ -437,14 +443,17 @@ strong, b
 
 
 .article-title
+	color: black
+	text-transform: uppercase
 	position: absolute
 	bottom: 0px
-	color: white
-	padding: 30px 35px
-	text-shadow: 2px 2px 2px grey
-	text-transform: uppercase
+	background-color: white
+	opacity: 0.8
+	font-weight: 700
+	padding: 10px 10px
+
 	&:hover
-		color: white
+		color: $sotet-szurke
 
 /* article main section */
 .main-section
@@ -491,7 +500,6 @@ strong, b
 	// position: fixed
 	background-color: rgba(255,255,255,0.8)
 	min-height: 180px
-	border-right: 5px solid $olimpia-kek
 	padding-left: 0px
 	// background-color: white
 
