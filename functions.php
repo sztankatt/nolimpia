@@ -87,11 +87,12 @@ function cubiq_setup () {
 add_filter('wpseo_opengraph_image', 'opengraph_image');
 
 function opengraph_image(){
-    $meta = '<meta property="og:image" content="'
-            . get_theme_file_uri('assets/img/nolimpia-szines-fekete-negyzet.png')
-            . '" />';
+    echo '';
+    // $meta = '<meta property="og:image" content="'
+    //         . get_theme_file_uri('assets/img/nolimpia-szines-fekete-negyzet.png')
+    //         . '" />';
 
-    echo $meta;
+    // echo $meta;
 }
 
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
