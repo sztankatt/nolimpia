@@ -60,7 +60,7 @@ Template Name: Landing page
 			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/nepszavazas-2024-budapest-olimpia-csatlakozz-aktivista/">VEGYÉL RÉSZT</a></div>
             </div>
 			<div class="why-not">
-			 <a id="why-not-button" href="/budapesti-olimpia-helyett-jovo-nolimpia/">MIÉRT NEM AKARUNK OLIMPIÁT?<p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p></a>
+			 <a id="why-not-button" href="/cikkek/">MIÉRT NEM AKARUNK OLIMPIÁT?<p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p></a>
 			</div>
         </div>
     </div>
