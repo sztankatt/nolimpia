@@ -1,17 +1,18 @@
-<?php 
+<?php
 add_shortcode('payment_details', 'payment_shortcode_handler');
 add_shortcode('adatok', 'adatok_shortcode_handler');
 add_shortcode('ervek', 'ervek_shortcode_handler');
 add_shortcode('gyik', 'gyik_shortcode_handler');
 add_shortcode('social_media_share', 'social_media_share_handler');
 add_shortcode('iframe', 'iframe_handler');
+add_shortcode('email_signup_form', 'email_signup_form_handler');
 
 function social_media_share_handler($atts, $content = null){
 	ob_start(); ?>
 		<a class="social-media-share" href="http://www.facebook.com/sharer.php?u=https://nolimpia.com">
 	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>" alt="Facebook" />
 	    </a>
-	    
+
 	    <a class="social-media-share" href="https://twitter.com/share?url=https://nolimpia.com&amp;text=NOlimpia&amp;hashtags=nolimpiabp">
 	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.png'); ?>" alt="Twitter" />
 	    </a>
@@ -45,7 +46,7 @@ function get_ervek_or_adatok($type){
 	));?>
 	<div class="panel-group" id="postok-<?php echo $type ?>">
 	<?php	foreach($posts as $post){ ?>
-		
+
 		<div class="panel panel-default">
 			<div class="panel-heading" role="tab" id="post-heading-<?php echo $post->ID?>">
 				<h4 class="panel-title">
@@ -56,7 +57,7 @@ function get_ervek_or_adatok($type){
 			</div>
 			<div id="post-collapse-<?php echo $post->ID?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="post-heading-<?php echo $post->ID?>">
 				<div class="panel-body">
-				<?php 
+				<?php
 
 					// remove_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
 					echo apply_filters('the_content', $post->post_content) ?>
@@ -122,6 +123,61 @@ function iframe_handler($atts, $content){
 	ob_start(); ?>
 		<div class="iframe-container">
 		<iframe style="border: 0;" src="<?php echo $a['src'] ?>" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+	<?php
+	return ob_get_clean();
+}
+
+function email_signup_form_handler(){
+	ob_start(); ?>
+		<!-- Begin MailChimp Signup Form -->
+			<!-- <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css"> -->
+			<style type="text/css">
+				#mc_embed_signup{
+					width: 100%;
+				}
+
+				#mc_embed_signup .email{
+					width: 100%;
+					margin-bottom: .4em;
+					padding-right: 2em;
+					box-sizing: border-box;
+					padding: .2em;
+					border: 1px solid #8C2360;
+
+					color: #8C2360;
+					font-weight: bold;
+				}
+				#mc_embed_signup .email:placeholder-shown{
+					font-weight: normal;
+				}
+
+				#mc_embed_signup .button{
+					display: block;
+					max-width: 400px;
+					margin: 0 auto;
+
+					border: 1px solid #8C2360;
+					background: transparent;
+					width: 100%;
+					color: #8C2360;
+				}
+				#mc_embed_signup .button:hover{
+					/*TODO: Change to uniform hover color*/
+					background: #f6f6f6;
+				}
+			</style>
+			<div id="mc_embed_signup">
+			<form action="//blog.us12.list-manage.com/subscribe/post?u=7d892f7cc8f5f8002d47f92ae&amp;id=efdf1f3ed5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			    <div id="mc_embed_signup_scroll">
+				<!-- <label for="mce-EMAIL">Iratkozz fel hírlevelünkre!</label> -->
+				<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="e-mail cím" required>
+			    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7d892f7cc8f5f8002d47f92ae_efdf1f3ed5" tabindex="-1" value=""></div>
+			    <div class="clear"><input type="submit" value="Feliratkozom" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+			    </div>
+			</form>
+			</div>
+		<!--End MailChimp Signup Form-->
 	<?php
 	return ob_get_clean();
 }
