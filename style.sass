@@ -94,6 +94,7 @@ blockquote
 			padding-right: 0px!important
 			padding-left: 0px!important
 
+
 @media (min-width: 480px)
 	html,body
 		font-size: 15pt
@@ -123,6 +124,12 @@ blockquote
 		padding-left: 10%
 		padding-right: 10%
 
+	.panel-group .panel-default .panel-body .ervek-image-container
+		margin-right: -25px
+		padding-right: 25px
+		padding-left: 15px
+		margin-left: -15px
+
 @media (min-width: 768px)
 	blockquote
 		border-right: 25px solid $olimpia-zold
@@ -132,7 +139,7 @@ blockquote
 
 	.article 
 		p, .panel-body
-			img
+			img.alignnone
 				width: -moz-calc(100% + 40px)
 				width: -webkit-calc(100% + 40px)
 				width: -o-calc(100% + 40px)
@@ -141,9 +148,6 @@ blockquote
 				margin-left: -10px
 				margin-right: -30px
 				padding-right: 25px
-		// &.article-image-only
-		// 	padding-right: 0px!important
-		// 	padding-left: 0px!important
 
 	.main-section .article-img
 		margin-left: -30px
@@ -177,6 +181,12 @@ blockquote
 		padding-left: 0px
 		padding-right: 0px
 
+	.panel-group .panel-default .panel-body .ervek-image-container
+		margin-right: -30px
+		padding-right: 25px
+		padding-left: 10px
+		margin-left: -10px
+
 @media (max-width: 767px)
 	html, body
 		font-size: 14pt
@@ -193,7 +203,7 @@ blockquote
 			padding-right: calc(10% - 25px)!important
 			padding-left: calc(10% - 25px)!important
 		p, .panel-body
-			img
+			img.alignnone
 				width: -moz-calc(100% + 55px)
 				width: -webkit-calc(100% + 55px)
 				width: -o-calc(100% + 55px)
@@ -238,6 +248,12 @@ blockquote
 			margin-right: 0px!important
 		.article-img-caption
 			padding: 20px 30px
+
+	.panel-group .panel-default .panel-body .ervek-image-container
+		margin-right: -30px
+		padding-right: 25px
+		padding-left: 25px
+		margin-left: -25px
 
 @media (max-width: 991px) and (min-width: 768px)
 	.top-page .landing-container
@@ -571,7 +587,7 @@ blockquote
 				margin-bottom: 0px
 
 		p, .panel-body
-			img
+			img.alignnone
 				background-color: $olimpia-sarga
 
 		a
@@ -765,11 +781,6 @@ blockquote
 
 			.ervek-image-container
 				background-color: $olimpia-sarga
-				margin-right: -25px
-				padding-right: 25px
-				padding-left: 15px
-				margin-left: -15px
-
 
 				.ervek-image img
 					width: 100%

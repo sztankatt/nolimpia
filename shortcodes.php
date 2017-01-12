@@ -91,7 +91,7 @@ function article_img_caption_shortcode( $empty, $attr, $content ){
         'id'      => '',
         'align'   => 'alignnone',
         'width'   => '',
-        'caption' => ''
+        'caption' => '',
     ), $attr );
 
     if ( 1 > (int) $attr['width'] || empty( $attr['caption'] ) ) {
