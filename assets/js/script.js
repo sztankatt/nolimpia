@@ -12,11 +12,14 @@ $(document).ready(function(){
 	}).attr('target', '_blank');
 
 
-	$('.article-img').parent().children('.col').matchHeight();
+	$('.article-img').parent().children('.match-height').matchHeight();
 
 	$('.feed-first-row div').matchHeight();
 	// $('.feed-second-row div').matchHeight();
 	$('.feed-third-row div').matchHeight();
+	$('.article-header .match-height').matchHeight();
+	console.log($('.article-heaer .match-height').html());
+	
 	$('.footer .row .col').matchHeight();
 
 	$('#why-not-button').click(function(event){

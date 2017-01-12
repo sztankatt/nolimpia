@@ -57,10 +57,10 @@ function get_ervek_or_adatok($type){
 			</div>
 			<div id="post-collapse-<?php echo $post->ID?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="post-heading-<?php echo $post->ID?>">
 				<div class="panel-body">
-				<?php
-
-					// remove_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
-					echo apply_filters('the_content', $post->post_content) ?>
+				<?php 
+					remove_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
+					add_filter('img_caption_shortcode', 'ervek_img_caption_shortcode', 10, 3);
+					echo do_shortcode($post->post_content) ?>
 				</div>
 			</div>
 		</div>
@@ -103,15 +103,41 @@ function my_img_caption_shortcode( $empty, $attr, $content ){
     }
 
     return '</div></div><div class="row">'
-    . '<div class="col col--1-of-5 article-img-caption">'
+    . '<div class="col-sm-3 article-img-caption match-height col-xl-offset-1 col-xl-2 col-xxl-offset-2 col-xxl-2">'
     . $attr['caption']
     . '</div>'
-    . '<div class="col col--3-of-5 article-img">'
+    . '<div class="col-sm-9 col-md-7 article-img match-height col-xl-6 col-xxl-5">'
     . '<div ' . $attr['id']
     . 'class="article-img-container" >'
     . do_shortcode( $content )
     // . '<p class="wp-caption-text">' . $attr['caption'] . '</p>'
-    . '</div></div></div><div class="row"><div class="col col--3-of-5 col--push-1-of-5 article">';
+    . '</div></div></div><div class="row"><div class="col-xl-offset-3 col-xl-6 col-sm-offset-3 col-md-7 col-sm-9 article col-xxl-offset-4 col-xxl-5">';
+
+}
+
+function ervek_img_caption_shortcode( $empty, $attr, $content ){
+    $attr = shortcode_atts( array(
+        'id'      => '',
+        'align'   => 'alignnone',
+        'width'   => '',
+        'caption' => ''
+    ), $attr );
+
+    if ( 1 > (int) $attr['width'] || empty( $attr['caption'] ) ) {
+        return '';
+    }
+
+    if ( $attr['id'] ) {
+        $attr['id'] = 'id="' . esc_attr( $attr['id'] ) . '" ';
+    }
+
+    return '<div class="ervek-image-container">'
+    . '<div ' . $attr['id']
+    . 'class="ervek-image" >'
+    . do_shortcode( $content )
+    . '</div>'
+    . '<div class="ervek-image-caption">' . $attr['caption'] . '</div>'
+    . '</div>';
 
 }
 
