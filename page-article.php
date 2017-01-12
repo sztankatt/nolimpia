@@ -13,15 +13,17 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				echo get_the_post_thumbnail_url(196, 'full');
 			}
 			?>'); ">
-		<div class="left-sidebar col col--1-of-5 col--m-1-of-4">
+		<div class="left-sidebar col-sm-3 match-height col-xl-offset-1 col-xl-2 col-xxl-offset-2">
 			<?php get_sidebar(); ?>
 		</div>
-		<div class="col col--4-of-5 article-title col--m-3-of-4">
+		<div class="col-sm-9 match-height col-xxl-8">
+			<div class="article-title">
 			<?php the_title(); ?>
+			</div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col--3-of-5 col--push-1-of-5 article col--m-8-of-10 col--m-push-1-of-10">
+		<div class="article col-sm-9 col-sm-offset-3 col-md-7 col-md-offset-3 col-xl-6 col-xl-offset-3 col-xxl-offset-4 col-xxl-5">
 			<?php edit_post_link(); ?>
 			<?php the_content(); ?>	
 	
