@@ -58,7 +58,7 @@ function get_ervek_or_adatok($type){
 			<div id="post-collapse-<?php echo $post->ID?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="post-heading-<?php echo $post->ID?>">
 				<div class="panel-body">
 				<?php 
-					remove_filter( 'img_caption_shortcode', 'my_img_caption_shortcode', 10, 3 );
+					remove_filter( 'img_caption_shortcode', 'article_img_caption_shortcode', 10, 3 );
 					add_filter('img_caption_shortcode', 'ervek_img_caption_shortcode', 10, 3);
 					echo do_shortcode($post->post_content) ?>
 				</div>
@@ -86,7 +86,7 @@ function gyik_shortcode_handler($atts, $content=null){
 	return get_ervek_or_adatok('gyik');
 }
 
-function my_img_caption_shortcode( $empty, $attr, $content ){
+function article_img_caption_shortcode( $empty, $attr, $content ){
     $attr = shortcode_atts( array(
         'id'      => '',
         'align'   => 'alignnone',
