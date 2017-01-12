@@ -23,7 +23,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		</div>
 	</div>
 	<div class="row">
-		<div class="article col-sm-8 col-xs-offset-1 col-xs-10 col-sm-offset-3 col-md-7 col-lg-6 col-md-offset-3 col-xl-6 col-xl-offset-3 col-xxl-offset-4 col-xxl-5">
+		<div class="article col-sm-8 col-sm-offset-3 col-md-6 col-md-offset-3 col-xl-6 col-xl-offset-3 col-xxl-offset-4 col-xxl-5">
 			<?php edit_post_link(); ?>
 			<?php the_content(); ?>	
 	
