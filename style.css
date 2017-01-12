@@ -153,7 +153,11 @@ blockquote {
     padding-left: 0px;
     padding-right: 0px; } }
 @media (max-width: 767px) {
+  html, body {
+    font-size: 14pt; }
+
   blockquote {
+    font-size: 14pt !important;
     border-left: 25px solid #068348;
     border-right: 25px solid #068348;
     margin-right: -30px;
