@@ -1,6 +1,7 @@
 <ul class="nav nav-pills nav-stacked nav-left">
    <?php
 	$menu_name = 'main-menu';
+    $menu_list = '';
 	if($menu = wp_get_nav_menu_object($menu_name)){
 		$menu_items = wp_get_nav_menu_items($menu->term_id);
 
