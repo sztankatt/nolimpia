@@ -102,16 +102,16 @@ function article_img_caption_shortcode( $empty, $attr, $content ){
         $attr['id'] = 'id="' . esc_attr( $attr['id'] ) . '" ';
     }
 
-    return '</div></div><div class="row">'
+    return '</div></div><div class="row article article-image-only">'
     . '<div class="col-sm-3 article-img-caption match-height col-xl-offset-1 col-xl-2 col-xxl-offset-2 col-xxl-2">'
     . $attr['caption']
     . '</div>'
-    . '<div class="col-sm-9 col-md-7 article-img match-height col-xl-6 col-xxl-5">'
+    . '<div class="col-sm-8 col-md-7 col-lg-6 article-img match-height col-xl-6 col-xxl-5">'
     . '<div ' . $attr['id']
     . 'class="article-img-container" >'
     . do_shortcode( $content )
     // . '<p class="wp-caption-text">' . $attr['caption'] . '</p>'
-    . '</div></div></div><div class="row"><div class="col-xl-offset-3 col-xl-6 col-sm-offset-3 col-md-7 col-sm-9 article col-xxl-offset-4 col-xxl-5">';
+    . '</div></div></div><div class="row"><div class="article col-sm-8 col-sm-offset-3 col-md-7 col-md-offset-3 col-lg-6 col-lg-offset-3 col-xl-5 col-xl-offset-3 col-xxl-offset-4 col-xxl-4"">';
 
 }
 
