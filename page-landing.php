@@ -20,6 +20,7 @@ Template Name: Landing page
   ga('send', 'pageview');
 
 </script>
+<meta name="google-site-verification" content="4qLgh1J2R4ZuuIG72KClYMfHOEdbc5yL0wJB021ACYw" />
 </head>
 <body>
 <div id="landing-page-entry">
