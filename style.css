@@ -1,7 +1,7 @@
 /*
  * Theme Name: nolimpia custom
  * Theme URI: none
- * Author: nolimpia IT 
+ * Author: nolimpia IT
  * Author URI: none
  * Description: nolimpia honlap
  * Version: 0.0.1 */
@@ -573,6 +573,11 @@ blockquote {
       background-repeat: no-repeat;
       background-position: right center;
       margin-right: 17px; }
+
+.front-page-transition {
+  position: relative; }
+  .front-page-transition.active {
+    top: -100vh; }
 
 .feed-container {
   min-height: 100%;

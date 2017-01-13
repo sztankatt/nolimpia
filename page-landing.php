@@ -24,7 +24,7 @@ Template Name: Landing page
 </head>
 <body>
 <div id="landing-page-entry">
-    <?php 
+    <?php
         if (has_post_thumbnail()){
             $background = get_the_post_thumbnail_url(null, 'full');
             //echo $background;
@@ -65,7 +65,7 @@ Template Name: Landing page
 			<div class="slogan">NEM AZ OLIMPIÁRA, IGEN A JÖVŐNKRE!</div>
 			<div class="row">
 				<div class="col col--1-of-3"><a class="olimpia-zold-hatter" href="/<?php echo get_post_field('post_name', 53)?>/">TÁMOGASS</a></div>
-				
+
 				<div class="col col--1-of-3"><a class="olimpia-voros-hatter" href="/<?php echo get_post_field('post_name', 63)?>/">ÍRD ALÁ</a></div>
 			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">VEGYÉL RÉSZT</a></div>
             </div>
@@ -75,9 +75,8 @@ Template Name: Landing page
         </div>
     </div>
 </div>
-<div id="landing-page-next" style="display: none;">
-
     <?php include_once('top-menu.php'); ?>
+	<?php get_template_part('page-feed'); ?>
 </div>
 
 
@@ -89,18 +88,18 @@ Template Name: Landing page
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1 class="modal-title" id="myModalLabel">
-            <?php 
+            <?php
                 $id = 188;
-                $post = get_post($id); 
-                $title = apply_filters('the_title', $post->post_title); 
-                echo $title;  
+                $post = get_post($id);
+                $title = apply_filters('the_title', $post->post_title);
+                echo $title;
             ?>
         </h1>
       </div>
       <div class="modal-body">
-        <?php 
-            $content = apply_filters('the_content', $post->post_content); 
-            echo $content;    
+        <?php
+            $content = apply_filters('the_content', $post->post_content);
+            echo $content;
         ?>
       </div>
     </div>
@@ -112,29 +111,25 @@ Template Name: Landing page
         <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1 class="modal-title" id="myModalLabel">
-            <?php 
+            <?php
                 $id = 63;
-                $post = get_post($id); 
-                $title = apply_filters('the_title', $post->post_title); 
-                echo $title;  
+                $post = get_post($id);
+                $title = apply_filters('the_title', $post->post_title);
+                echo $title;
             ?>
         </h1>
       </div>
       <div class="modal-body">
-        <?php 
-            $content = apply_filters('the_content', $post->post_content); 
-            echo $content;    
+        <?php
+            $content = apply_filters('the_content', $post->post_content);
+            echo $content;
         ?>
       </div>
     </div>
   </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
-<script src="<?php echo get_theme_file_uri('assets/js/script.js'); ?>"></script>
+<?php get_footer(); ?>
 </body>
 
 

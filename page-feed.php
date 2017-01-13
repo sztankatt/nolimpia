@@ -3,15 +3,15 @@
 Template Name: Feed page
 */
 
-get_header(); 
-if ( have_posts() ) : while ( have_posts() ) : the_post(); 
+get_header();
+if ( have_posts() ) : while ( have_posts() ) : the_post();
 $image_url = get_the_post_thumbnail_url(196, 'full');
 $header_post_id = 202;
 $header_post = get_post($header_post_id);
 
 ?>
 
-<div class="feed-container container-fluid">
+<div id="budapesti-olimpia-cikkek" class="feed-container container-fluid front-page-transition">
 	<div class="row feed-first-row">
 		<div class="col-md-4 left-sidebar">
 			<?php get_sidebar(); ?>
@@ -42,7 +42,7 @@ $header_post = get_post($header_post_id);
 		</div>
 		<?php }?>
 	</div>
-	<?php 
+	<?php
 	if ($post_num > 3){ ?>
 	<div class="row feed-third-row">
 		<?php for($i = 3; $i < $post_num; $i++){
@@ -61,5 +61,3 @@ $header_post = get_post($header_post_id);
 
 
 <?php endwhile; endif; ?>
-
-<?php get_footer(); ?>
