@@ -19,8 +19,27 @@ $(document).ready(function(){
 	$('.feed-third-row div').matchHeight();
 	$('.article-header .match-height').matchHeight();
 	console.log($('.article-heaer .match-height').html());
-
+	
 	$('.footer .row .col').matchHeight();
+
+	function transitionLandingToFeed(){
+		var feedUrl = $('#why-not-button').attr('href');
+		$('#white-header').css('position', 'relative');
+		$('#landing-page-next').show();
+		$('#landing-page-entry').slideUp(1000, function(){
+			document.location.pathname = feedUrl;
+		});
+	}
+
+	$('#why-not-button').click(function(event){
+		event.preventDefault();
+		transitionLandingToFeed();
+	});
+
+	$('#landing-page-entry').bind('wheel', function (event){
+		event.preventDefault();
+		transitionLandingToFeed();
+	});
 
 	$('.article a span').css('font-weight', '700');
 
