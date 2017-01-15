@@ -9,7 +9,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<? if (is_front_page()): get_template_part('top-menu-landing'); endif ?>
 <?php include_once('top-menu.php'); ?>
 
 
@@ -19,18 +18,18 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1 class="modal-title" id="myModalLabel">
-            <?php
+            <?php 
                 $id = 188;
-                $post = get_post($id);
-                $title = apply_filters('the_title', $post->post_title);
-                echo $title;
+                $post = get_post($id); 
+                $title = apply_filters('the_title', $post->post_title); 
+                echo $title;  
             ?>
         </h1>
       </div>
       <div class="modal-body">
-        <?php
-            $content = apply_filters('the_content', $post->post_content);
-            echo $content;
+        <?php 
+            $content = apply_filters('the_content', $post->post_content); 
+            echo $content;    
         ?>
       </div>
     </div>
