@@ -3,7 +3,6 @@
 Template Name: Feed page
 */
 
-get_header();
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 $image_url = get_the_post_thumbnail_url(196, 'full');
 $header_post_id = 202;

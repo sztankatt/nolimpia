@@ -1,7 +1,6 @@
-<?php
-
-?>
-<div id="white-header" class="header header-white front-page-transition">
+<div id="white-header" class="header header-white
+	<?php if (is_front_page()): echo ' deactivated'; endif //If loaded on the front page, add class front-page-transition ?>
+		">
     <nav class="navbar navbar-static-top">
       <div class="container-fluid">
         <div class="navbar-header">

@@ -3,13 +3,8 @@
 Template Name: Landing page
 */
 ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<?php get_header(); ?>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<meta property="og:image" content="<?php echo  get_theme_file_uri('assets/img/nolimpia-szines-fekete-negyzet.png')?>" />
-<?php wp_head(); ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,7 +15,7 @@ Template Name: Landing page
   ga('send', 'pageview');
 
 </script>
-<meta name="google-site-verification" content="4qLgh1J2R4ZuuIG72KClYMfHOEdbc5yL0wJB021ACYw" />
+<?php wp_head(); ?>
 </head>
 <body>
 <div id="landing-page-entry">
@@ -34,33 +29,6 @@ Template Name: Landing page
         }
     ?>
     <div class="top-page" style="background-image: url('<?php echo $background ?>');">
-    <div id="header" class="header">
-        <div id="logo" class="logo">
-            <a href="">&nbsp;
-            </a>
-        </div>
-        <ul>
-            <li>
-                <a href="#" data-toggle="modal" data-target="#momentum-desc">a <strong class="momentum-lila-hover">momentum</strong> szervezésében</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.facebook.com/nolimpiabp"><img style="margin-left:0px;" src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>"></img>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.twitter.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.png'); ?>"></img>
-                </a>
-            </li>
-            <!-- <li>
-                <a target="_blank" href="https://www.youtube.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-03.png'); ?>"></img>
-                </a>
-            </li> -->
-            <li>
-                <a target="_blank" href="https://www.instagram.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-04.png'); ?>"></img>
-                </a>
-            </li>
-        </ul>
-    </div>
         <div class="landing-container">
 			<div class="slogan">NEM AZ OLIMPIÁRA, IGEN A JÖVŐNKRE!</div>
 			<div class="row">
@@ -70,12 +38,12 @@ Template Name: Landing page
 			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">VEGYÉL RÉSZT</a></div>
             </div>
 			<div class="why-not">
-			 <a id="why-not-button" href="/<?php echo get_post_field('post_name', 333)?>/">MIÉRT NEM AKARUNK OLIMPIÁT?<p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p></a>
+				<!--TODO: Avoid hardcoded URL-->
+			 <a id="why-not-button" href="#budapesti-olimpia-cikkek">MIÉRT NEM AKARUNK OLIMPIÁT?<p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p></a>
 			</div>
         </div>
     </div>
 </div>
-    <?php include_once('top-menu.php'); ?>
 	<?php get_template_part('page-feed'); ?>
 </div>
 
