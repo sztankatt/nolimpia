@@ -3,13 +3,8 @@
 Template Name: Landing page
 */
 ?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<?php get_header(); ?>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<meta property="og:image" content="<?php echo  get_theme_file_uri('assets/img/nolimpia-szines-fekete-negyzet.png')?>" />
-<?php wp_head(); ?>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,11 +15,11 @@ Template Name: Landing page
   ga('send', 'pageview');
 
 </script>
-<meta name="google-site-verification" content="4qLgh1J2R4ZuuIG72KClYMfHOEdbc5yL0wJB021ACYw" />
+<?php wp_head(); ?>
 </head>
 <body>
 <div id="landing-page-entry">
-    <?php 
+    <?php
         if (has_post_thumbnail()){
             $background = get_the_post_thumbnail_url(null, 'full');
             //echo $background;
@@ -34,50 +29,22 @@ Template Name: Landing page
         }
     ?>
     <div class="top-page" style="background-image: url('<?php echo $background ?>');">
-    <div id="header" class="header">
-        <div id="logo" class="logo">
-            <a href="">&nbsp;
-            </a>
-        </div>
-        <ul>
-            <li>
-                <a href="#" data-toggle="modal" data-target="#momentum-desc">a <strong class="momentum-lila-hover">momentum</strong> szervezésében</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.facebook.com/nolimpiabp"><img style="margin-left:0px;" src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>"></img>
-                </a>
-            </li>
-            <li>
-                <a target="_blank" href="https://www.twitter.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.png'); ?>"></img>
-                </a>
-            </li>
-            <!-- <li>
-                <a target="_blank" href="https://www.youtube.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-03.png'); ?>"></img>
-                </a>
-            </li> -->
-            <li>
-                <a target="_blank" href="https://www.instagram.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-04.png'); ?>"></img>
-                </a>
-            </li>
-        </ul>
-    </div>
         <div class="landing-container">
 			<div class="slogan">NEM AZ OLIMPIÁRA, IGEN A JÖVŐNKRE!</div>
 			<div class="row">
 				<div class="col col--1-of-3"><a class="olimpia-zold-hatter" href="/<?php echo get_post_field('post_name', 53)?>/">TÁMOGASS</a></div>
-				
+
 				<div class="col col--1-of-3"><a class="olimpia-voros-hatter" href="/<?php echo get_post_field('post_name', 63)?>/">ÍRD ALÁ</a></div>
 			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">CSATLAKOZZ</a></div>
             </div>
 			<div class="why-not">
-			 <a id="why-not-button" href="/<?php echo get_post_field('post_name', 333)?>/">MIÉRT NEM AKARUNK OLIMPIÁT?<p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p></a>
+				<!--TODO: Avoid hardcoded URL-->
+			 <a id="why-not-button" href="#budapesti-olimpia-cikkek">MIÉRT NEM AKARUNK OLIMPIÁT?<p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p></a>
 			</div>
         </div>
     </div>
 </div>
-<div id="landing-page-next" style="display: none;">
-
-    <?php include_once('top-menu.php'); ?>
+	<?php get_template_part('page-feed'); ?>
 </div>
 
 
@@ -89,18 +56,18 @@ Template Name: Landing page
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1 class="modal-title" id="myModalLabel">
-            <?php 
+            <?php
                 $id = 188;
-                $post = get_post($id); 
-                $title = apply_filters('the_title', $post->post_title); 
-                echo $title;  
+                $post = get_post($id);
+                $title = apply_filters('the_title', $post->post_title);
+                echo $title;
             ?>
         </h1>
       </div>
       <div class="modal-body">
-        <?php 
-            $content = apply_filters('the_content', $post->post_content); 
-            echo $content;    
+        <?php
+            $content = apply_filters('the_content', $post->post_content);
+            echo $content;
         ?>
       </div>
     </div>
@@ -112,29 +79,25 @@ Template Name: Landing page
         <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1 class="modal-title" id="myModalLabel">
-            <?php 
+            <?php
                 $id = 63;
-                $post = get_post($id); 
-                $title = apply_filters('the_title', $post->post_title); 
-                echo $title;  
+                $post = get_post($id);
+                $title = apply_filters('the_title', $post->post_title);
+                echo $title;
             ?>
         </h1>
       </div>
       <div class="modal-body">
-        <?php 
-            $content = apply_filters('the_content', $post->post_content); 
-            echo $content;    
+        <?php
+            $content = apply_filters('the_content', $post->post_content);
+            echo $content;
         ?>
       </div>
     </div>
   </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
-<script src="<?php echo get_theme_file_uri('assets/js/script.js'); ?>"></script>
+<?php get_footer(); ?>
 </body>
 
 
