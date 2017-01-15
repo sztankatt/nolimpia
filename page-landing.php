@@ -35,7 +35,7 @@ Template Name: Landing page
 				<div class="col col--1-of-3"><a class="olimpia-zold-hatter" href="/<?php echo get_post_field('post_name', 53)?>/">TÁMOGASS</a></div>
 
 				<div class="col col--1-of-3"><a class="olimpia-voros-hatter" href="/<?php echo get_post_field('post_name', 63)?>/">ÍRD ALÁ</a></div>
-			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">VEGYÉL RÉSZT</a></div>
+			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">CSATLAKOZZ</a></div>
             </div>
 			<div class="why-not">
 				<!--TODO: Avoid hardcoded URL-->

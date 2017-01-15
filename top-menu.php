@@ -16,14 +16,14 @@
           <ul class="nav navbar-nav nav-cat">
                 <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 53)?>/" class="olimpia-zold">támogass</a></li>
                 <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 63)?>/" class="olimpia-voros">írd alá</a></li>
-              <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 55)?>/" class="olimpia-sarga">vegyél részt</a></li>
+              <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 55)?>/" class="olimpia-sarga">csatlakozz</a></li>
         </ul>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 53)?>/" class="olimpia-zold">támogass</a></li>
                 <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 63)?>/" class="olimpia-voros">írd alá</a></li>
-                <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 55)?>/" class="olimpia-sarga">vegyél részt</a></li>
+                <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 55)?>/" class="olimpia-sarga">csatlakozz</a></li>
                 <li><a href="#" class="momentum-lila-hover" data-toggle="modal" data-target="#momentum-desc">momentum</a></li>
                 <li><a href="/<?php echo get_post_field('post_name', 229)?>/">kapcsolat</a></li>
                 <li><a target="_blank" href="https://www.facebook.com/nolimpiabp"><img style="margin-left:0px;" src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>"></img>
