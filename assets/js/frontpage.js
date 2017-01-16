@@ -97,7 +97,7 @@ $(document).ready(function(){
 		inTransition = true;
 		setTimeout(function(){
 			inTransition = false;
-		}, 1000);
+		}, 500);
 	}
 
 	function TransitionLandingToFeed() {
