@@ -2,7 +2,7 @@
  *
  * Theme Name: nolimpia custom
  * Theme URI: none
- * Author: nolimpia IT 
+ * Author: nolimpia IT
  * Author URI: none
  * Description: nolimpia honlap
  * Version: 0.0.1 */
@@ -14,7 +14,7 @@ $olimpia-sarga-hover: #CC892D
 $olimpia-kek: #0c69a3
 $olimpia-zold: #068348
 $olimpia-zold-hover: #084025
-$sotet-szurke: #282828 
+$sotet-szurke: #282828
 $vilagos-szurke: #a5a5a5
 $momentum-lila: #8C2360
 $szurke: #ececec
@@ -23,7 +23,7 @@ $szurke: #ececec
 
 h1
 	font-family: "Roboto Slab"
-	font-size: 24pt 
+	font-size: 24pt
 
 h1,h2,h3,h4,h5,h6
 	font-family: "Roboto Slab"
@@ -84,7 +84,7 @@ blockquote
 		margin-right: -15px
 
 	.top-page .landing-container
-		margin-top: 60px
+		margin-top: 0
 
 	.main-section .article
 		padding-left: 30px
@@ -106,8 +106,8 @@ blockquote
 		position: relative!important
 
 	.top-page .landing-container
-		margin-top: 90px
-	
+		margin-top: 0
+
 	.feed-first-row .feed-article-title
 		font-size: 18pt
 		padding: 25px 25px
@@ -137,7 +137,7 @@ blockquote
 		border-left: 10px solid $olimpia-zold
 		margin-left: -10px
 
-	.article 
+	.article
 		p, .panel-body
 			img.alignnone
 				width: -moz-calc(100% + 40px)
@@ -257,7 +257,7 @@ blockquote
 
 @media (max-width: 991px) and (min-width: 768px)
 	.top-page .landing-container
-		margin-top: 120px
+		margin-top: 0
 
 	.feed-first-row .feed-article-title
 		font-size: 20pt
@@ -284,7 +284,7 @@ blockquote
 
 @media (min-width: 992px)
 	.landing-container
-		margin-top: 200px
+		margin-top: 0
 
 	.article-title
 		width: 100%
@@ -323,7 +323,7 @@ blockquote
 	.navbar-header .collapse, .navbar-toggle
 		display: block !important
 
-	.navbar-header 
+	.navbar-header
 		float: none
 
 	.navbar-collapse
@@ -365,15 +365,23 @@ blockquote
 
 .top-page
 	height: 100vh
+	width: 100%
 	overflow: hidden
 	background-position: center center
 	background-size: cover
 	background-repeat: no-repeat
-	position: relative
+	position: absolute
+	top: 0
 	text-align: center
+
+	//Vertically center all content inside
+	display: flex
+	flex-wrap: nowrap
+	align-items: center
 	.landing-container
 		display: inline-block
 		color: white
+		margin: 0 auto
 		text-align: center
 		.slogan
 			font-family: "Roboto Slab"
@@ -430,6 +438,8 @@ blockquote
 	height: 70px
 	z-index: 100
 	background-color: transparent
+	opacity: 1
+	transition: all 1s
 	.logo
 		background-image: url("assets/img/nolimpia-szines-feher.png")
 		width: 160px
@@ -494,6 +504,27 @@ blockquote
 
 	ul li:first-child a
 		// padding-top: 5px
+
+.header-landing
+	position: absolute
+	top: 0
+	ul
+		margin-top: 22px
+
+	ul li
+		padding-right: 12px
+	//Removing border around 'a momentum szervezeseben' after fading modal out
+	ul li:first-child:focus
+		outline: 0
+
+	@media (max-width: 434px)
+		ul
+			width: 100%
+			text-align: center
+
+		ul li:first-child
+			display: block
+			margin-bottom: 10px
 
 .landing-button
 	position: absolute
@@ -661,7 +692,7 @@ blockquote
 		li.active
 			a
 				font-weight: bold
-		
+
 		li.special
 			a
 				color: $olimpia-voros
@@ -675,20 +706,26 @@ blockquote
 			background-position: right center
 			margin-right: 17px
 
-.feed-container
-	min-height: 100%
-	margin: 0 auto 0px
-	padding-left: 50px
-	padding-right: 50px
+//Front-page-transition
+.front-page-transition
+	position: relative
+	top: 100vh
+
+	transition: 1s top
+	&.active
+		top: 0vh
+.header.deactivated
+	opacity: 0
+
 @for $i from 1 through 20
 	@media (min-width: 1200px + $i*100)
 		.feed-container
 			padding-left: 50px + $i*40
 			padding-right: 50px + $i*40
 .feed-container
-	margin-top: 70px
-	padding-top: 30px
-	padding-bottom: 30px
+	min-height: 100%
+	margin: 70px auto 0 auto
+	padding: 0 50px 30px 50px
 	background-color: $szurke
 
 	.feed-first-row, .feed-second-row
