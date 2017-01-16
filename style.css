@@ -338,9 +338,8 @@ blockquote {
     text-align: center; }
     .top-page .landing-container .slogan {
       font-family: "Roboto Slab";
-      padding-bottom: 20px;
       color: white;
-      font-size: 40pt; }
+      font-size: 25pt; }
     .top-page .landing-container a {
       padding: 5px;
       color: white;
@@ -351,7 +350,7 @@ blockquote {
         color: white;
         text-decoration: none; }
     .top-page .landing-container div {
-      margin-bottom: 30px; }
+      margin-bottom: 20px; }
       .top-page .landing-container div:last-child {
         margin-bottom: 0px; }
     .top-page .landing-container .why-not {

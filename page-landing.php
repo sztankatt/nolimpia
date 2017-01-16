@@ -31,6 +31,13 @@ Template Name: Landing page
     <div class="top-page" style="background-image: url('<?php echo $background ?>');">
         <div class="landing-container">
 			<div class="slogan">NEM AZ OLIMPIÁRA, IGEN A JÖVŐNKRE!</div>
+      <div class="row">
+                <div class="col-md-offset-0 col-md-12">
+                    <div class="iframe-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/PN2iHd7c_As" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
 			<div class="row">
 				<div class="col col--1-of-3"><a class="olimpia-zold-hatter" href="/<?php echo get_post_field('post_name', 53)?>/">TÁMOGASS</a></div>
 
