@@ -97,18 +97,20 @@ $(document).ready(function(){
 		inTransition = true;
 		setTimeout(function(){
 			inTransition = false;
-		}, 250);
+		}, 1000);
 	}
 
 	function TransitionLandingToFeed() {
 		SetInTransition();
 		$('.front-page-transition').addClass('active');
+		window.location.hash = 'budapesti-olimpia-cikkek';
 		transitionedToFeed = true;
 	}
 
 	function TransitionFeedToLanding() {
 		SetInTransition();
 		$('.front-page-transition').removeClass('active');
+		window.location.hash = '';
 		transitionedToFeed = false;
 	}
 
