@@ -44,8 +44,10 @@ Template Name: Landing page
         </div>
     </div>
 </div>
-	<?php get_template_part('page-feed'); ?>
-</div>
+<div id="budapesti-olimpia-cikkek" class="feed-container container-fluid front-page-transition">
+
+	<?php get_template_part('page-feed-articles'); ?>
+  </div>
 
 
 
