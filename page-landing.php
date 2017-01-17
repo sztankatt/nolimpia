@@ -3,21 +3,8 @@
 Template Name: Landing page
 */
 ?>
-<?php get_header(); ?>
-<head>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-90078683-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<?php wp_head(); ?>
-</head>
-<body>
+<?php get_header();
+ ?>
 <div id="landing-page-entry">
     <?php
         if (has_post_thumbnail()){
@@ -32,18 +19,23 @@ Template Name: Landing page
         <div class="landing-container">
 			<div class="slogan">NEM AZ OLIMPIÁRA, IGEN A JÖVŐNKRE!</div>
       <div class="row">
-                <div class="col-md-offset-0 col-md-12">
+                <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
                     <div class="iframe-container">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/PN2iHd7c_As" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
 			<div class="row">
-				<div class="col col--1-of-3"><a class="olimpia-zold-hatter" href="/<?php echo get_post_field('post_name', 53)?>/">TÁMOGASS</a></div>
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+          <div class="row">
+              <div class="col-xs-4"><a class="olimpia-zold-hatter" href="/<?php echo get_post_field('post_name', 53)?>/">TÁMOGASS</a></div>
 
-				<div class="col col--1-of-3"><a class="olimpia-voros-hatter" href="/<?php echo get_post_field('post_name', 63)?>/">ÍRD ALÁ</a></div>
-			     <div class="col col--1-of-3"><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">CSATLAKOZZ</a></div>
+            <div class="col-xs-4"><a class="olimpia-voros-hatter" href="/<?php echo get_post_field('post_name', 63)?>/">ÍRD ALÁ</a></div>
+               <div class="col-xs-4"><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">CSATLAKOZZ</a></div>
+                </div>   
+
             </div>
+      </div>
 			<div class="why-not">
 				<!--TODO: Avoid hardcoded URL-->
 			 <a id="why-not-button" href="#budapesti-olimpia-cikkek">MIÉRT NEM AKARUNK OLIMPIÁT?<p><img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p></a>
