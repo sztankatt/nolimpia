@@ -79,11 +79,17 @@ blockquote {
     padding-right: 30px; }
     .main-section .article.article-image-only {
       padding-right: 0px !important;
-      padding-left: 0px !important; } }
+      padding-left: 0px !important; }
+
+  .video-row {
+    margin-bottom: 30px !important; } }
 @media (min-width: 480px) {
   html, body {
     font-size: 15pt;
-    font-family: "Open Sans"; } }
+    font-family: "Open Sans"; }
+
+  .video-row {
+    margin-bottom: 35px !important; } }
 @media (min-width: 480px) and (max-width: 767px) {
   .article-title {
     font-size: 20pt !important;
