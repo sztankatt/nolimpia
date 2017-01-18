@@ -23,7 +23,7 @@ Template Name: Landing page
           <div class="row video-row">
           <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
               <div class="iframe-container">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/PN2iHd7c_As" frameborder="0" allowfullscreen></iframe>
+                  <iframe src="https://www.google.com/maps/d/embed?mid=1apzOnW6kccr7MY3vpkNGE3J-Bu0" frameborder="0" allowfullscreen></iframe>
               </div>
           </div>
       </div>
