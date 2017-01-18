@@ -1,0 +1,4 @@
+<Files "alairasgyujto_iv.pdf">
+Order Allow,Deny
+Deny from all
+</Files>

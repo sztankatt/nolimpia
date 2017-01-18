@@ -41,6 +41,18 @@ blockquote {
   blockquote strong, blockquote b {
     color: white; }
 
+.help-block {
+  font-size: 12pt; }
+
+.btn-primary, .btn-primary.disabled {
+  background-color: #8C2360;
+  border-color: #8C2360; }
+  .btn-primary:hover, .btn-primary.disabled:hover {
+    background-color: #8C2360;
+    background-opacity: 0.8; }
+  .btn-primary:focus, .btn-primary.disabled:focus {
+    background-color: #8C2360; }
+
 /* media */
 @media (max-width: 479px) {
   blockquote {

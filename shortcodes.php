@@ -6,6 +6,55 @@ add_shortcode('gyik', 'gyik_shortcode_handler');
 add_shortcode('social_media_share', 'social_media_share_handler');
 add_shortcode('iframe', 'iframe_handler');
 add_shortcode('email_signup_form', 'email_signup_form_handler');
+add_shortcode('ivletoltes', 'ivletoltes_handler');
+
+function ivletoltes_handler($atts, $content){
+	ob_start(); ?>
+	<style type="text/css">
+		#ivletoltes-form-container .button{
+			display: block;
+			max-width: 400px;
+			margin: 0 auto;
+
+			border: 1px solid #8C2360;
+			background: transparent;
+			width: 100%;
+			color: #8C2360;
+		}
+		#ivletoltes-form-container .button:hover{
+			/*TODO: Change to uniform hover color*/
+			background: #f6f6f6;
+		}
+
+		#ivletoltes-form-container h3{
+			margin-top: 0px;
+		}
+	</style>
+	<div id="ivletoltes-form-container">
+	<form action="/ivletoltes/" method="post" data-focus="false" data-toggle="validator" role="form" id="ivletoltes-form" class="form-horizontal">
+		<div class="form-group">
+	    <div class="checkbox col-sm-8 col-sm-offset-2">
+	      <label>
+	        <input name="ivletoltes_checkbox" type="checkbox" id="terms" data-error="A letöltéshez ell kell fogadnia az álírásgyűjtési nyilatkozatot." required>
+	        <?php echo $content ?>
+	      </label>
+	      <div class="help-block with-errors"></div>
+	    </div>
+	  </div>
+	  <div class="form-group">
+	  	<div class="col-sm-8 col-sm-offset-2">
+			<h3><input type="submit" class="button" value="Letöltés" /></h3>
+		</div>
+	</div>
+	</form>
+	<div id="ivletoltes-form-success">
+
+	</div>
+	</div>
+
+	<?php
+	return ob_get_clean();
+}
 
 function social_media_share_handler($atts, $content = null){
 	ob_start(); ?>
