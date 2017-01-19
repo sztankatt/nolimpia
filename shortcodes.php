@@ -35,7 +35,7 @@ function ivletoltes_handler($atts, $content){
 		<div class="form-group">
 	    <div class="checkbox col-sm-8 col-sm-offset-2">
 	      <label>
-	        <input name="ivletoltes_checkbox" type="checkbox" id="terms" data-error="A letöltéshez ell kell fogadnia az álírásgyűjtési nyilatkozatot." required>
+	        <input name="ivletoltes_checkbox" type="checkbox" id="terms" data-error="A letöltéshez el kell fogadnia az aláírásgyűjtési nyilatkozatot." required>
 	        <?php echo $content ?>
 	      </label>
 	      <div class="help-block with-errors"></div>
