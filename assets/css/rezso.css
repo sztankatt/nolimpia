@@ -41,8 +41,8 @@
 \*-----------------------------------*/
 
 .row {
-    list-style: none;
-    margin-left: -20px;
+    list-style: none;/*
+    margin-left: -20px;*/
 }
 
 .col--2-of-2,
