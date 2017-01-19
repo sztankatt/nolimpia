@@ -447,6 +447,8 @@ blockquote {
         -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.65);
         -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.65);
         box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.65); }
+        .top-page .landing-container .cat-button-container .cat-button a:focus {
+          text-decoration: none; }
     .top-page .landing-container .arrow {
       clear: both; }
       .top-page .landing-container .arrow:hover {
