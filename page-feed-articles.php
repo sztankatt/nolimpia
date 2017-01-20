@@ -7,10 +7,10 @@ $header_post = get_post($header_post_id);
 ?>
 
 	<div class="row feed-first-row">
-		<div class="col-md-3 left-sidebar">
+		<div class="col-md-4 left-sidebar">
 			<?php get_sidebar(); ?>
 		</div>
-		<div class="col-md-4 main-article" style="background-image: url('<?php echo get_the_post_thumbnail_url($header_post, 'full') ?>');">
+		<div class="col-md-8 main-article" style="background-image: url('<?php echo get_the_post_thumbnail_url($header_post, 'full') ?>');">
 			<a href="<?php echo get_permalink($header_post); ?>" class="feed-article-title"><?php echo $header_post->post_title ?></a>
 		</div>
 	</div>
