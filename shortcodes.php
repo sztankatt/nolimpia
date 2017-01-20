@@ -192,14 +192,14 @@ function ervek_img_caption_shortcode( $empty, $attr, $content ){
 
 function iframe_handler($atts, $content){
 	$a = shortcode_atts(array(
-		'src' => '', 'helptext' => false), $atts);
+		'src' => '', 'helptext' => false, 'align' => 'center'), $atts);
 
 	if ($a['src'] == '') return;
 	ob_start(); ?>
 		<div class="iframe-container <?php if($a['helptext']){ echo 'video-container';}?> ">
 		<iframe style="border: 0;" src="<?php echo $a['src'] ?>" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 		<?php if($a['helptext']){
-			echo '<p class="help-block help-block-lila">' . $content . '</p>';
+			echo '<p class="help-block help-block-lila" style="text-align: '. $a['align'] . '">' . $content . '</p>';
 		}
 	return ob_get_clean();
 }
