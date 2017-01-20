@@ -13,7 +13,7 @@ $(document).ready(function(){
 
 
 	$('.article-img').parent().children('.match-height').matchHeight();
-	$('.vide-row .match-height').matchHeight();
+	$('.video-row .match-height').matchHeight();
 
 	$('.feed-first-row div').matchHeight();
 	// $('.feed-second-row div').matchHeight();

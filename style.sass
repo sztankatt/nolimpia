@@ -64,7 +64,7 @@ blockquote
 		background-color: $momentum-lila
 		color: white
 		margin-top: 0px
-		margin-bottom: 15px
+		margin-bottom: 20px
 
 @media(max-width: 767px)
 	.help-block
@@ -118,8 +118,8 @@ blockquote
 			padding-right: 0px!important
 			padding-left: 0px!important
 
-	.video-row
-		margin-bottom: 30px!important
+	// .video-row
+	// 	margin-bottom: 30px!important
 
 
 @media (min-width: 480px)
@@ -128,7 +128,7 @@ blockquote
 		font-family: "Open Sans"
 
 	.video-row
-		margin-bottom: 25px!important
+		// margin-bottom: 25px!important
 		
 		&>div
 			padding-left: 3%
@@ -165,7 +165,7 @@ blockquote
 		padding-left: 15px
 		margin-left: -15px
 	.slogan
-		font-size: 18pt
+		font-size: 16pt
 
 @media (min-width: 768px)
 	blockquote
@@ -225,7 +225,7 @@ blockquote
 		margin-left: -10px
 
 	.slogan
-		font-size: 24pt
+		font-size: 20pt
 
 @media (max-width: 767px)
 	html, body
@@ -298,7 +298,7 @@ blockquote
 @media (max-width: 991px) and (min-width: 768px)
 	.top-page .landing-container
 		a
-			font-size: 20pt
+			font-size: 18pt
 
 	.feed-first-row .feed-article-title
 		font-size: 20pt
@@ -326,7 +326,7 @@ blockquote
 @media (min-width: 992px)
 	.landing-container
 		a
-			font-size: 24pt
+			font-size: 20pt
 
 	.article-title
 		width: 100%
@@ -355,7 +355,7 @@ blockquote
 			margin-right: -15px
 
 	.video-row
-		margin-bottom: 25px!important
+		// margin-bottom: 25px!important
 		
 		&>div
 			padding-left: 1.5%
@@ -405,18 +405,10 @@ blockquote
 	.navbar li a img
 		margin-bottom: 0px!important
 
-/* LANDING CONTAINER MEDIA */
-// @media (max-width: 439px) and (max-height: 999px)
-// 	.landing-container
-// 		margin-top: 180px
-
-// @media (min-width: 440px) and (max-height: 999px)
-// 	.landing-container
-// 		margin-top: 140px
 
 @media (max-height: 999px)
 	.landing-container
-		margin-top: 80px
+		margin-top: 70px
 
 @for $i from 0 through 15
 	@media (min-height: $i*100px + 1000px) and (min-width: 589px)
@@ -460,7 +452,7 @@ blockquote
 		.slogan
 			color: white
 			font-weight: 700
-			margin-bottom: 35px
+			margin-bottom: 20px
 
 		.cat-button-container 
 			// background-color: rgba(0,0,0,0.2)
@@ -474,20 +466,11 @@ blockquote
 				a
 					display: block
 					font-weight: 700
-					-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65)
-					-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65)
-					box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.65)
 
 					&:focus
 						text-decoration: none
 		.arrow
-			clear: both
-
-
-			&:hover
-				color: white
-				text-decoration: none
-
+			margin-top: -10px
 
 
 
@@ -681,7 +664,6 @@ blockquote
 /* article main section */
 .main-section
 	margin-top: 70px
-	// background-color: $szurke
 	min-height: 100vh
 	.article-header
 		background-position: center center
@@ -940,6 +922,7 @@ blockquote
 		position: absolute
 
 .video-container
+	padding-bottom: calc(56.25% - 50px)
 	border: 2px solid $momentum-lila
 	iframe
 		top: -50px
@@ -948,6 +931,14 @@ blockquote
 
 
 /* GRID SYSTEM */
+@media(min-width: 1200px)
+	@for $i from 1 through 24
+		.col-lg24-#{$i}
+			width: percentage($i/24)
+	@for $i from 1 through 23
+		.col-lg24-offset-#{$i}
+			margin-left: percentage($i/24)
+
 @media (min-width: 1500px)
 	@for $i from 1 through 12
 		.col-xl-#{$i}

@@ -19,30 +19,32 @@ Template Name: Landing page
         <div class="landing-container">
 			<div class="slogan">NEM AZ OLIMPIÁRA, IGEN A JÖVŐNKRE!</div>
       <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
+        <div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
           <div class="row video-row">
-            <div class="col-xs-12 col-sm-offset-0 col-sm-8 col-md-offset-1 col-md-7 match-height">
+            <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg24-offset-3 col-lg24-18">
                 <div class="iframe-container video-container">
                     <iframe src="https://www.google.com/maps/d/embed?mid=1apzOnW6kccr7MY3vpkNGE3J-Bu0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <p class="help-block help-block-lila">Kattints a térképen levő pultokra ahhoz, hogy megtudd pontosan mettől meddig leszünk kint a helyszíneken!</p>
             </div>
-            <div class="col-xs-12 col-sm-4 col-md-offset-0 col-md-3 cat-button-container match-height">
-              <div class="row">
-                <div class="cat-button col-xs-4 col-sm-12"><a class="olimpia-zold-hatter" href="/<?php echo get_post_field('post_name', 53)?>/">TÁMOGASS</a></div>
-
-                <div class="cat-button col-xs-4 col-sm-12"><a class="olimpia-voros-hatter" href="/<?php echo get_post_field('post_name', 63)?>/">ÍRD ALÁ</a></div>
-
-                <div class="cat-button col-xs-4 col-sm-12"><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">CSATLAKOZZ</a></div>
-                <div class="cat-button col-xs-12"><a id="why-not-button" class="olimpia-kek-hatter" href="#budapesti-olimpia-cikkek">ÉRVEINK<!-- 
-                <p class="arrow">  <img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p> -->
-                </a></div>
-              </div>
-            </div>
-
+          </div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2">
+          <div class="row cat-button-container video-row">
+            <div class="cat-button col-xs-4 "><a class="olimpia-zold-hatter" href="/<?php echo get_post_field('post_name', 53)?>/">TÁMOGASS</a></div>
+
+            <div class="cat-button col-xs-4 "><a class="olimpia-voros-hatter" href="/<?php echo get_post_field('post_name', 63)?>/">ÍRD ALÁ</a></div>
+
+            <div class="cat-button col-xs-4 "><a class="olimpia-sarga-hatter" href="/<?php echo get_post_field('post_name', 55)?>/">CSATLAKOZZ</a></div>
+            <div class="cat-button col-xs-12"><a id="why-not-button" class="" href="#budapesti-olimpia-cikkek">MIÉRT NEM AKARUNK OLIMPIÁT?
+            <p class="arrow">  <img src="<?php echo get_theme_file_uri('assets/img/nyil-le.png'); ?>" /></p>
+            </a></div>
+          </div>
         </div>
+      </div>
+        
     </div>
 </div>
 <div id="budapesti-olimpia-cikkek" class="feed-container container-fluid front-page-transition">
