@@ -883,7 +883,8 @@ blockquote {
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
-  height: 0; }
+  height: 0;
+  border: 2px solid #8C2360; }
   .iframe-container iframe {
     left: 0;
     top: 0;
@@ -891,10 +892,9 @@ blockquote {
     width: 100%;
     position: absolute; }
 
-.video-container {
-  padding-bottom: calc(56.25% - 50px);
-  border: 2px solid #8C2360; }
-  .video-container iframe {
+.map-container {
+  padding-bottom: calc(56.25% - 50px); }
+  .map-container iframe {
     top: -50px;
     height: calc(100% + 50px); }
 

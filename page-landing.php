@@ -22,7 +22,7 @@ Template Name: Landing page
         <div class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
           <div class="row video-row">
             <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-8 col-md-offset-2 col-lg24-offset-3 col-lg24-18">
-                <div class="iframe-container video-container">
+                <div class="iframe-container map-container">
                     <iframe src="https://www.google.com/maps/d/embed?mid=1apzOnW6kccr7MY3vpkNGE3J-Bu0" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <p class="help-block help-block-lila">Kattints a térképen levő pultokra ahhoz, hogy megtudd pontosan mettől meddig leszünk kint a helyszíneken!</p>
