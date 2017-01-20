@@ -92,3 +92,8 @@ and (max-width: 767px){
     /*margin-bottom: 0px !important;*/
     /*margin-left: -80px !important;*/
 }
+
+.container-fluid>.navbar-collapse{
+margin-left: -30px !important;
+padding-left: 25px;
+}
