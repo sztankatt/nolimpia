@@ -49,29 +49,6 @@ Template Name: Feed page
     </div>
   </div>
 </div>
-<div class="modal fade" id="itt-ird-ala" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-        <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h1 class="modal-title" id="myModalLabel">
-            <?php
-                $id = 63;
-                $post = get_post($id);
-                $title = apply_filters('the_title', $post->post_title);
-                echo $title;
-            ?>
-        </h1>
-      </div>
-      <div class="modal-body">
-        <?php
-            $content = apply_filters('the_content', $post->post_content);
-            echo $content;
-        ?>
-      </div>
-    </div>
-  </div>
-</div>
 
 <?php get_footer(); ?>
 </body>

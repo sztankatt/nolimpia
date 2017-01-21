@@ -59,11 +59,11 @@ function ivletoltes_handler($atts, $content){
 function social_media_share_handler($atts, $content = null){
 	ob_start(); ?>
 		<a class="social-media-share" href="http://www.facebook.com/sharer.php?u=https://nolimpia.com">
-	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>" alt="Facebook" />
+	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.jpg'); ?>" alt="Facebook" />
 	    </a>
 
 	    <a class="social-media-share" href="https://twitter.com/share?url=https://nolimpia.com&amp;text=NOlimpia&amp;hashtags=nolimpiabp">
-	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.png'); ?>" alt="Twitter" />
+	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.jpg'); ?>" alt="Twitter" />
 	    </a>
 	<?php
 	return ob_get_clean();
@@ -100,7 +100,7 @@ function get_ervek_or_adatok($type){
 			<div class="panel-heading" role="tab" id="post-heading-<?php echo $post->ID?>">
 				<h4 class="panel-title">
 					<a class="collapsed" role="button" data-parent="#postok-<?php echo $type ?>" data-toggle="collapse" href="#post-collapse-<?php echo $post->ID?>" aria-controls="post-collapse-<?php echo $post->ID?>">
-					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.png'); ?>" /><?php echo $i . ". " . $post->post_title ?>
+					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.jpg'); ?>" /><?php echo $i . ". " . $post->post_title ?>
 					</a>
 				</h4>
 			</div>

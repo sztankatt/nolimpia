@@ -26,10 +26,10 @@
                 <li class="cat-container"><a href="/<?php echo get_post_field('post_name', 55)?>/" class="olimpia-sarga">csatlakozz</a></li>
                 <li><a href="#" class="momentum-lila-hover" data-toggle="modal" data-target="#momentum-desc">momentum</a></li>
                 <li><a href="/<?php echo get_post_field('post_name', 229)?>/">kapcsolat</a></li>
-                <li><a target="_blank" href="https://www.facebook.com/nolimpiabp"><img style="margin-left:0px;" src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>"></img>
-                </a><a  target="_blank" href="https://www.twitter.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.png'); ?>"></img>
-                </a><!-- <a target="_blank" href="https://www.youtube.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-03.png'); ?>"></img>
-                </a> --><a target="_blank" href="https://www.instagram.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-04.png'); ?>"></img>
+                <li><a target="_blank" href="https://www.facebook.com/nolimpiabp"><img style="margin-left:0px;" src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.jpg'); ?>"></img>
+                </a><a  target="_blank" href="https://www.twitter.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.jpg'); ?>"></img>
+                </a><!-- <a target="_blank" href="https://www.youtube.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-03.jpg'); ?>"></img>
+                </a> --><a target="_blank" href="https://www.instagram.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-04.jpg'); ?>"></img>
                 </a></li>
               </ul>
         </div>
