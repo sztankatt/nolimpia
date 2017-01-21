@@ -92,12 +92,6 @@ Template Name: Landing page
             ?>
         </h1>
       </div>
-      <div class="modal-body">
-        <?php
-            $content = apply_filters('the_content', $post->post_content);
-            echo $content;
-        ?>
-      </div>
     </div>
   </div>
 </div>

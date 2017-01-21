@@ -9,8 +9,8 @@
   	</div>
   </div>
 </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="<?php echo get_theme_file_uri('assets/js/bootstrap.min.js'); ?>"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
 <script src="<?php echo get_theme_file_uri('assets/js/script.js?1100'); ?>"></script>
