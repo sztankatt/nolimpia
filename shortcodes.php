@@ -59,11 +59,11 @@ function ivletoltes_handler($atts, $content){
 function social_media_share_handler($atts, $content = null){
 	ob_start(); ?>
 		<a class="social-media-share" href="http://www.facebook.com/sharer.php?u=https://nolimpia.com">
-	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.jpg'); ?>" alt="Facebook" />
+	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-01.png'); ?>" alt="Facebook" />
 	    </a>
 
 	    <a class="social-media-share" href="https://twitter.com/share?url=https://nolimpia.com&amp;text=NOlimpia&amp;hashtags=nolimpiabp">
-	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.jpg'); ?>" alt="Twitter" />
+	        <img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-02.png'); ?>" alt="Twitter" />
 	    </a>
 	<?php
 	return ob_get_clean();
