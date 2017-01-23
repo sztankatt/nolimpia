@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 	$('.feed-first-row div').matchHeight();
 	// $('.feed-second-row div').matchHeight();
-	$('.feed-third-row div').matchHeight();
+	$('.feed-third-row .match-height').matchHeight();
 	$('.article-header .match-height').matchHeight();
 	console.log($('.article-heaer .match-height').html());
 

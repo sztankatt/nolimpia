@@ -42,7 +42,7 @@ $header_post = get_post($header_post_id);
 		<?php for($i = 3; $i < $post_num; $i++){
 			$post = $posts[$i];
 			?>
-			<div class="col-md-4 col-sm-6">
+			<div class="col-md-4 col-sm-6 match-height">
 				<div class="feed-article-container">
 					<a href="<?php echo get_permalink($post)?>" class="feed-article-title"><?php echo $post->post_title ?></a>
 					<div class="feed-article-description"><?php echo get_post_meta($post->ID, '_yoast_wpseo_metadesc', true);?></div>
