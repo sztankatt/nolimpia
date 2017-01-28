@@ -26,5 +26,6 @@
 			<a target="_blank" href="https://www.instagram.com/nolimpiabp"><img src="<?php echo get_theme_file_uri('assets/img/ikonok-001-04.png'); ?>"></img>
 			</a>
 		</li>
+		<div id="switcher" class="switcher"><?php echo do_shortcode('[asmp-switcher]');?></div>
 	</ul>
 </div>
