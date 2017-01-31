@@ -139,4 +139,37 @@ function remove_width_attribute( $html ) {
 include('shortcodes.php');
 include('init.php');
 
+function trans($text){
+    $dict = array(
+        'támogass' => 'support',
+        'írd alá' => 'sign',
+        'csatlakozz' => 'join us',
+        'kapcsolat' => 'contact',
+        'Érveink' => 'Arguments',
+        'Articles' => 'Articles',
+        'Cikkek' => 'Articles',
+        'Gyakori kérdések' => 'FAQ',
+        'A NOlimpia kampányról' => 'About the campaign'
+
+        );
+    if($_GET['lang'] == 'en'){
+        return $dict[$text];
+    }
+    return $text;
+}
+
+function has_en($post_id){
+    return get_post_meta($post_id, 'en-title', true) != '';
+}
+
+function posts_en($posts){
+    $posts_en = array();
+    foreach($posts as $post){
+        if(has_en($post->ID)){
+            array_push($posts_en, $post);
+        }
+    }
+    return $posts_en;
+}
+
 ?>

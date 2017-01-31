@@ -1,5 +1,9 @@
 <ul class="nav nav-pills nav-stacked nav-left">
    <?php
+   	$lang = '';
+   	if($_GET['lang'] == 'en'){
+   		$lang = '?lang=en';
+   	}
 	$menu_name = 'main-menu';
     $menu_list = '';
 	if($menu = wp_get_nav_menu_object($menu_name)){
@@ -8,7 +12,7 @@
 		foreach ( (array) $menu_items as $key => $menu_item ) {
 			$title = $menu_item->title;
 			$url = $menu_item->url;
-			$menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
+			$menu_list .= '<li><a href="' . $url . $lang .'">' . trans($title) . '</a></li>';
 		}
 	}
 	else{

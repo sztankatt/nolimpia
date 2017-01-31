@@ -20,17 +20,25 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h1 class="modal-title" id="myModalLabel">
             <?php
-                $id = 188;
-                $post_mom = get_post($id);
-                $title = apply_filters('the_title', $post_mom->post_title);
-                echo $title;
+            $id = 188;
+            $post_mom = get_post($id);
+            if($_GET['lang'] == 'en'){
+              $title_mom = apply_filters('the_title', get_post_meta($post_mom->ID, 'en-title', true));
+            } else {
+              $title_mom = apply_filters('the_title', $post_mom->post_title);
+            }
+
+            echo $title_mom;
             ?>
         </h1>
       </div>
       <div class="modal-body">
         <?php
-            $content = apply_filters('the_content', $post_mom->post_content);
-            echo $content;
+        if($_GET['lang'] == 'en'){
+            echo get_post_meta($post_mom->ID, 'en-content', true);
+          } else {
+            echo $post_mom->post_content;
+          }
         ?>
       </div>
     </div>

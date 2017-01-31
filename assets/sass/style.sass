@@ -467,12 +467,11 @@ blockquote
 				padding-top: 0px
 			.cat-button
 				margin-bottom: 15px
-				// width: 100%
-				// padding: 10px 5px
 
 				a
 					display: block
 					font-weight: 700
+					text-transform: uppercase
 
 					&:focus
 						text-decoration: none
@@ -569,7 +568,17 @@ blockquote
 
 	ul li:first-child a
 		// padding-top: 5px
+	.switcher
+		color: black
+		padding-top: 5px!important
+		a
+			line-height: 30px!important
+			font-weight: 400!important
 
+.switcher a
+	display: inline-block!important
+	color: $momentum-lila!important
+	float: none!important
 .header-landing
 	position: absolute
 	top: 0
@@ -584,7 +593,7 @@ blockquote
 
 		ul li:first-child
 			display: block
-			margin-bottom: 10px
+			margin-bottom: 10px		
 
 .landing-button
 	position: absolute

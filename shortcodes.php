@@ -92,7 +92,11 @@ function get_ervek_or_adatok($type){
 		'post_type' => $type,
 		'numberposts' => -1,
 		'order' => 'DESC'
-	));?>
+	));
+	if($_GET['lang'] == 'en'){
+		$posts = posts_en($posts);
+	}
+	?>
 	<div class="panel-group" id="postok-<?php echo $type ?>">
 	<?php	foreach($posts as $post){ ?>
 
@@ -100,7 +104,12 @@ function get_ervek_or_adatok($type){
 			<div class="panel-heading" role="tab" id="post-heading-<?php echo $post->ID?>">
 				<h4 class="panel-title">
 					<a class="collapsed" role="button" data-parent="#postok-<?php echo $type ?>" data-toggle="collapse" href="#post-collapse-<?php echo $post->ID?>" aria-controls="post-collapse-<?php echo $post->ID?>">
-					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.jpg'); ?>" /><?php echo $i . ". " . $post->post_title ?>
+					<img class="arrow-down" src="<?php echo get_theme_file_uri('assets/img/le_nyil.jpg'); ?>" /><?php 
+						if($_GET['lang'] == 'en'){
+							echo $i . ". " . get_post_meta($post->ID, 'en-title', true);
+						} else{
+							echo $i . ". " . $post->post_title;
+						} ?>
 					</a>
 				</h4>
 			</div>
@@ -109,7 +118,11 @@ function get_ervek_or_adatok($type){
 				<?php 
 					remove_filter( 'img_caption_shortcode', 'article_img_caption_shortcode', 10, 3 );
 					add_filter('img_caption_shortcode', 'ervek_img_caption_shortcode', 10, 3);
-					echo do_shortcode($post->post_content) ?>
+					if($_GET['lang'] == 'en'){
+						echo do_shortcode(get_post_meta($post->ID, 'en-title', true));
+					} else{
+						echo do_shortcode($post->post_content);
+					} ?>
 				</div>
 			</div>
 		</div>

@@ -3,7 +3,13 @@
  ?>
 		">
   <div class="row">
-  	<div class="col-sm-6 col-md-4"><div class="copyright">Copyright &copy; Momentum Egyesület, 2017. Minden jog fenntartva.</div></div>
+  	<div class="col-sm-6 col-md-4"><div class="copyright">Copyright &copy; Momentum Egyesület, 2017.
+  	<?php if($_GET['lang'] == 'en'){
+  		echo "All rights reserved";
+  	} else{
+  		echo "Minden jog fenntartva.";
+  	}?>
+  	</div></div>
   	<div class="col-sm-6 col-md-4 col-md-offset-4 img-container">
   		<img src="<?php echo get_theme_file_uri('assets/img/momentum-feher-transparent.png'); ?>" />
   	</div>
